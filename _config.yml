@@ -1,22 +1,18 @@
-title: Siavash Monfared # your name (or website title) here
-logo: "/images/FullSizeRender.jpg?raw=true" # your photo (or logo) here
+title: Mohammad Reza Daneshvar # your name (or website title) here
+logo: "/images/logo.jpeg?raw=true" # your photo (or logo) here
 description: > # your text below (remove <br> elements if you don't need line breaks)
-  Siavash Khosh Sokhan Monfared
+  Mohammad Reza Daneshvar
   <br><br>
-  Niels Bohr Institute, University of Copenhagen
+  Postdoctoral Fellow, Concordia University
   <br>
   previously: Harvard University, California Institute of Technology, Massachusetts Institute of Technology and University of Oklahoma
   <br><br>
   <a href = "mailto: monfared@alum.mit.edu">Email</a>
   <br>
-  <a href="https://scholar.google.com/citations?user=E9GMpVEAAAAJ&hl=en">Google Scholar</a> 
+  <a href="https://scholar.google.com/citations?hl=en&user=QiQqIuAAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a> 
   <br>
-  <a href="https://github.com/siavashmonfared">GitHub</a> 
+  <a href="https://github.com/MRDanesh">GitHub</a> 
 
-theme: jekyll-theme-minimal 
-#theme: jekyll-theme-slate
-#remote_theme: sparanoid/almace-scaffolding
-#remote_theme: pages-themes/minimal-mistakes@4.25.0
 google_analytics: G-B8PX8YWL3J # your Google Analytics tracking ID here and
   
 
