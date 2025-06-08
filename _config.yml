@@ -1,3 +1,13 @@
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      css: "assets/css/style.css"
+
+
+
 title: Mohammad Reza Daneshvar Garmroodi  # your name (or website title) here
 logo: "/images/logo.jpeg?raw=true" # your photo (or logo) here
 description: > # your text below (remove <br> elements if you don't need line breaks)
