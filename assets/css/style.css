@@ -1,10 +1,4 @@
 
 img[src*="logo.jpeg"] {
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  display: block;
-  margin: 20px auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 70%;
 }
