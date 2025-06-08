@@ -1,23 +1,22 @@
-
-defaults:
-  -
-    scope:
-      path: ""
-    values:
-      css: "assets/css/style.css"
-
-
-
-title: Mohammad Reza Daneshvar Garmroodi  # your name (or website title) here
-logo: "/images/logo.jpeg?raw=true" # your photo (or logo) here
+title: Siavash Monfared # your name (or website title) here
+logo: "/images/FullSizeRender.jpg?raw=true" # your photo (or logo) here
 description: > # your text below (remove <br> elements if you don't need line breaks)
-  First description 
+  Siavash Khosh Sokhan Monfared
   <br><br>
-  Second description 
+  Niels Bohr Institute, University of Copenhagen
+  <br>
+  previously: Harvard University, California Institute of Technology, Massachusetts Institute of Technology and University of Oklahoma
   <br><br>
-  <a href="https://www.linkedin.com/in/example/">View My LinkedIn Profile</a> 
+  <a href = "mailto: monfared@alum.mit.edu">Email</a>
+  <br>
+  <a href="https://scholar.google.com/citations?user=E9GMpVEAAAAJ&hl=en">Google Scholar</a> 
+  <br>
+  <a href="https://github.com/siavashmonfared">GitHub</a> 
+
+theme: jekyll-theme-minimal 
+#theme: jekyll-theme-slate
+#remote_theme: sparanoid/almace-scaffolding
+#remote_theme: pages-themes/minimal-mistakes@4.25.0
+google_analytics: G-B8PX8YWL3J # your Google Analytics tracking ID here and
   
-remote_theme: pages-themes/minimal@v0.2.0
-plugins:
-- jekyll-remote-theme
-google_analytics: UA-000000-0 # your Google Analytics tracking ID here
+
