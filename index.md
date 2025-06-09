@@ -17,7 +17,7 @@ A free surface such as the ocean-atmosphere interface will modify the structure 
 I study free surfaces experimentally: on the left in the animation below, **homogeneous turbulence** is generated in the bulk of a liquid by arrays of randomly-actuated synthetic jets; on the right, **wind** blown along the water surface in a long channel induces both **surface gravity waves** and **turbulence** in the water. In both setups, **particle image velocimetry** is used to obtain the vorticity fields (shown in red and blue), and **laser-induced fluorescence** is used to locate the air-water interface (shown in cyan).
 
 <br>
-<img src="vorticity.gif" width=800>
+<img src="vorticity-compress.gif" width=700>
 
 *Related publications*
 - **Ruth, D. J.**, & Coletti, F. (2024). **[Structure and energy transfer in homogeneous turbulence below a free surface](https://www.arxiv.org/abs/2406.05889)**. *Accepted for publication by the Journal of Fluid Mechanics*.
