@@ -4,20 +4,20 @@ title: "Research"
 
 ## Research
 
-I am a Postdoctoral Researcher in the [Ida Karimfazli Group](https://users.encs.concordia.ca/~idak/). During my PhD, I studied the mixing dynamics of **viscoplastic fluids**.
+I am a Postdoctoral Researcher in [Ida Karimfazli Group](https://users.encs.concordia.ca/~idak/). During my PhD, I studied the mixing dynamics of **viscoplastic fluids**.
 
 I am interested in studying **non-Newtonian**, **multiphase**, and **turbulent flows** both **experimentally** and **numerically**.
 
 ---
 
-### Elasto-capilarry 
+### Mixing localization in yield-stress fluids
 
 A free surface such as the ocean-atmosphere interface will modify the structure of a turbulent flow, and wind acting at a free surface can generate turbulence in the water below.
 
 I study free surfaces experimentally: on the left in the animation below, **homogeneous turbulence** is generated in the bulk of a liquid by arrays of randomly-actuated synthetic jets; on the right, **wind** blown along the water surface in a long channel induces both **surface gravity waves** and **turbulence** in the water. In both setups, **particle image velocimetry** is used to obtain the vorticity fields (shown in red and blue), and **laser-induced fluorescence** is used to locate the air-water interface (shown in cyan).
 
 <br>
-<img src="images/vorticity.gif" width=500>
+<img src="images/regimes.gif" width=500>
 
 *Related publications*
 - **Ruth, D. J.**, & Coletti, F. (2024). **[Structure and energy transfer in homogeneous turbulence below a free surface](https://www.arxiv.org/abs/2406.05889)**. *Accepted for publication by the Journal of Fluid Mechanics*.
