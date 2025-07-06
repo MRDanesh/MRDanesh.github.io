@@ -4,13 +4,13 @@ title: "Research"
 
 ## Research
 
-I am a Postdoctoral Researcher in the [Coletti Group](https://ifd.ethz.ch/research/group-coletti.html), which is part of the [Institute of Fluid Dynamics](https://ifd.ethz.ch/) at ETH Zurich. During my PhD, I studied the dynamics of **gas bubbles** in **turbulence** in the [Deike Lab](https://ldeike.princeton.edu/) at Princeton University, with applications to gas transfer at the ocean surface.
+I am a Postdoctoral Researcher in the [Ida Karimfazli Group](https://users.encs.concordia.ca/~idak/). During my PhD, I studied the mixing dynamics of **viscoplastic fluids**.
 
-Broadly, I am interested in **multiphase turbulent flows** and the **experimental and numerical techniques** used to study them.
+I am interested in studying **non-Newtonian**, **multiphase**, and **turbulent flows** both **experimentally** and **numerically**.
 
 ---
 
-### Turbulence near free surfaces
+### Elasto-capilarry 
 
 A free surface such as the ocean-atmosphere interface will modify the structure of a turbulent flow, and wind acting at a free surface can generate turbulence in the water below.
 
