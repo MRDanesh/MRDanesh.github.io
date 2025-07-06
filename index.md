@@ -12,15 +12,14 @@ I am interested in studying **non-Newtonian**, **multiphase**, and **turbulent f
 
 ### Mixing localization in yield-stress fluids
 
-A free surface such as the ocean-atmosphere interface will modify the structure of a turbulent flow, and wind acting at a free surface can generate turbulence in the water below.
-
-I study free surfaces experimentally: on the left in the animation below, **homogeneous turbulence** is generated in the bulk of a liquid by arrays of randomly-actuated synthetic jets; on the right, **wind** blown along the water surface in a long channel induces both **surface gravity waves** and **turbulence** in the water. In both setups, **particle image velocimetry** is used to obtain the vorticity fields (shown in red and blue), and **laser-induced fluorescence** is used to locate the air-water interface (shown in cyan).
+We explore the mechanisms and regimes of mixing in yield-stress fluids by simulating the stirring of an infinite, two-dimensional domain filled with a Bingham fluid. A cylindrical stirrer moves along a circular path at constant speed to stir the fluid, with an initially quiescent domain marked by a passive dye in the lower half, facilitating the analysis of dye interface evolution and mixing dynamics. We first examine the mixing process in Newtonian fluids, identifying three key mechanisms: interface stretching and folding around the stirrer’s path, diffusion across streamlines, and dye advection and interface stretching due to vortex shedding. Introducing yield stress into the system leads to notable localization effects in mixing, manifesting through three mechanisms: advection of vortices within a finite distance of the stirrer, vortex entrapment near the stirrer, and complete suppression of vortex shedding at high yield stresses. Based on these mechanisms, we classify three
+distinct mixing regimes in yield-stress fluids: (i) Regime SE, where shed vortices escape the central region, (ii) Regime ST, where shed vortices remain trapped near the stirrer, and (iii) Regime NS, where no vortex shedding occurs. These regimes are quantitatively distinguished through spectral analysis of energy oscillations, revealing transitions and the critical Bingham and Reynolds numbers. The transitions are captured through effective Reynolds numbers, supporting a hypothesis that mixing regime transitions in yield-stress fluids share fundamental characteristics with bluff-body flow dynamics. The findings provide a mechanistic framework for understanding and predicting mixing behaviors in yield-stress fluids, suggesting that the localization mechanisms and mixing regimes observed here are archetypal for stirred-tank applications.
 
 <br>
 <img src="images/regimes.gif" width=500>
 
 *Related publications*
-- **Ruth, D. J.**, & Coletti, F. (2024). **[Structure and energy transfer in homogeneous turbulence below a free surface](https://www.arxiv.org/abs/2406.05889)**. *Accepted for publication by the Journal of Fluid Mechanics*.
+- **M.R. Daneshvar Garmroodi**, & I. Karimfazli (2025). **[Yield-Stress Fluid Mixing: Localization Mechanisms and Regime Transitions](https://arxiv.org/pdf/2503.09359)**. *Accepted for publication by the Journal of Fluid Mechanics*.
 
 ---
 
