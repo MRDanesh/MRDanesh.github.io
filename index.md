@@ -23,12 +23,12 @@ distinct mixing regimes in yield-stress fluids: (i) Regime SE, where shed vortic
 
 ---
 
-### Turbulent break-up of bubbles
+### Mixing in heterogeneous fluids
 
-In a turbulent flow, bubbles will break apart due to stresses from the surrounding turbulent liquid if they are large enough that surface tension is incapable of preventing severe deformations. Knowledge of the **dynamics of the break-ups** and the **distribution of bubble sizes** that are produced is important to modeling bubble-mediated gas transfer, as occurs with breaking waves on the ocean and in industrial bubble column reactors.
+In this study, primary objective is to emphasize the potential for substantial inaccuracies in predicting mixing outcomes when the effects heterogeneous fluid properties are disregarded. We investigate the homogenization of an additive in a fluid-filled cylindrical tank stirred by an axisymmetric disk, where both fluid rheology and density are contingent on the additive concentration. We introduce and compare two models for predicting mixing development. The first model (model problem T) incorporates variations in fluid properties dependent on the additive concentration, while the second model (model problem M) simplifies the fluid properties to their average values. Our approach to modeling mixing centers on a concentration field governed by advection–diffusion. We illustrate that the mapping between the parameter spaces of the two model problems is far from one-to-one. For any given point in the parameter space of model problem M, three distinct parameter groups (buoyancy, Atwood number, and viscosity ratio) exhibit unconstrained variations within the corresponding subset of the parameter space of model problem T. As a concrete example, we investigate the impact of buoyancy on the evolution of velocity and additive concentration in model problem. Our analysis characterizes the influence of buoyancy on the mixing rate by examining the asymptotic behavior of the concentration field. We find that the standard deviation of the concentration asymptotically converges to an exponential decay, with the intercept and decay rate diminishing as a power-law function of buoyancy. This underscores the significant effect that even slight variations in buoyancy can have on the mixing process. Finally, our results conclusively demonstrate that the recirculation zones, areas where fluid velocity is notable, in model problems M and T do not align.
 
 <br>
-<img src="images/bubble_release_smaller.gif" width=500>
+<img src="images/heteroMixing.gif" width=500>
 
 <!---
 The animation above shows the break-up of a bubble that is initially much larger than the scale at which surface tension could counteract turbulent stresses.
