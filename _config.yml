@@ -1,19 +1,19 @@
 title: Mohammad Reza # your name (or website title) here
-logo: "/images/profile.png?raw=true" # your photo (or logo) here 
+logo: "/images/profile.jpeg?raw=true" # your photo (or logo) here
 description: > # your text below (remove <br> elements if you don't need line breaks)
   <br>
   Postdoctoral Researcher at Concordia University
   <br><br>
-  non-Newtonian Fluid Mechanics | Turbulence | Multiphase Flows 
+  non-Newtonian Fluid Mechanics | Mixing | Multiphase Flows
   <br><br>
   <a href="./">Research</a>
   <br>
   <a href="./about_me">About Me</a>
   <br>
-  <a href="./code">Code</a>
+  <a href="./code">Codes</a>
   <br><br>
-  <a href="https://scholar.google.com/citations?hl=en&user=QiQqIuAAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a> | <a href="https://www.linkedin.com/in/danielruth/">LinkedIn</a> | <a href="https://github.com/danjruth">Github</a> | <a href="./CV_DanielRuth.pdf" target="_blank" rel="noopener noreferrer">CV</a>
-  
+  <a href="https://scholar.google.com/citations?hl=en&user=QiQqIuAAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a> | <a href="https://www.linkedin.com/in/mohammad-reza-daneshvar-garmroodi-70224214b/">LinkedIn</a> | <a href="https://github.com/mrdanesh">Github</a> | <a href="./CV_MRDanesh.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+
 theme: jekyll-theme-minimal
 google_analytics: G-H71G6K48EG # your Google Analytics tracking ID here
 #github:
