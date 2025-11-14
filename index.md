@@ -4,7 +4,7 @@ title: "Research"
 
 ## Research
 
-I am a Postdoctoral Researcher in [Ida Karimfazli Group](https://users.encs.concordia.ca/~idak/). During my PhD, I studied the mixing dynamics of **viscoplastic fluids**.
+I am a Postdoctoral Research Fellow in [Ida Karimfazli Group](https://users.encs.concordia.ca/~idak/). During my PhD, I studied the mixing dynamics of **viscoplastic fluids**.
 
 I am interested in studying **non-Newtonian**, **multiphase**, and **turbulent flows** both **experimentally** and **numerically**.
 
@@ -19,7 +19,7 @@ distinct mixing regimes in yield-stress fluids: (i) Regime SE, where shed vortic
 <img src="images/regimes.gif" width=500>
 
 *Related publications*
-- **M.R. Daneshvar Garmroodi**, & I. Karimfazli (2025). **[Yield-Stress Fluid Mixing: Localization Mechanisms and Regime Transitions](https://arxiv.org/pdf/2503.09359)**. *Accepted for publication by the Journal of Fluid Mechanics*.
+- **M.R. Daneshvar Garmroodi**, & I. Karimfazli (2025). **[Yield-Stress Fluid Mixing: Localization Mechanisms and Regime Transitions]( https://doi.org/10.1017/jfm.2025.10729)**. *Journal of Fluid Mechanics*.
 - **M.R. Daneshvar Garmroodi**, & I. Karimfazli (2025). **[Two-dimensional mixing stirred system, mixing regimes and transitions]()**. *Under preparation*.
 
 ---
@@ -34,3 +34,17 @@ In this study, primary objective is to emphasize the potential for substantial i
 *Related publications*
 - **M.R. Daneshvar Garmroodi**, & I. Karimfazli (2024). **[Mixing in heterogeneous fluids: An examination of fluid property variations](https://doi.org/10.1016/j.jnnfm.2024.105196)**. *Journal of non-Newtonian Fluid Mechanics*.
 
+---
+
+### Transporting waxy crude oil/water in core-annular and stratified regimes
+
+In this work, 3D numerical study has been performed to investigate the core-annular and stratified flows of waxy crude oil/water in inclined pipes with a gradual expansion. Waxy crudes are highly viscous crude oils which exhibit non-Newtonian flow behavior, and their efficient transportation is still a technical challenge. The use of the core-annular and stratified methods for the transportation of waxy crude is examined comprehensively where the core oil flows in the laminar flow regime, and the water flow field is turbulent. The volume of fluid multiphase flow model is used to capture the oil/water interface and RANS turbulence model has been employed to predict the turbulent features of the water flow field. The oil has been considered as a viscoplastic fluid in the core annular regim in an inclined pipe. The effects of several parameters during transporting oil, such as wax content of the crude oil, inlet velocities, expansion angle, and inclination angle of the pipe have been investigated comprehensively. The results revealed that in core-annular regime, as the wax content of the crude oil increased, the pressure drop along the pipeline did not change, and using the core-annular regime became more economical in comparison to single-phase oil flow. The simulation results also showed that increasing the expansion angle in the core-annular regime from 3.7 to 45 can increase overall pressure drop more than fourfold. Furthermore, it is found that transporting waxy crude in higher oil velocities can be more economical. Finally, it is shown that for downward flow, by increasing the inclination angle, overall pressure drop monotonically decreased. However, in upward flow, the overall pressure drop profile as a function of the inclination angle had a local maximum of around 45.
+
+<br>
+<img src="images/heteroMixing.gif" width=500>
+
+*Related publications*
+- **M.R. Daneshvar Garmroodi**, & A. Ahmadpour (2020). **[A numerical study on two-phase core-annular
+flows of waxy crude oil/water in inclined pipes](https://doi.org/10.1016/j.cherd.2020.04.017)**. *Chemical Engineering Research and Design*.
+- **M.R. Daneshvar Garmroodi**, & A. Ahmadpour (2020). **[A numerical study on two-phase core-annular
+flows of waxy crude oil/water in inclined pipes](https://doi.org/10.1016/j.petrol.2020.107458)**. *Journal of Petroleum Science and Engineering*.
