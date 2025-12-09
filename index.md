@@ -4,9 +4,22 @@ title: "Research"
 
 ## Research
 
-I am a Postdoctoral Research Fellow in [Ida Karimfazli Group](https://users.encs.concordia.ca/~idak/). During my PhD, I studied the mixing dynamics of **viscoplastic fluids**.
+I am a Postdoctoral Research Fellow in [Ida Karimfazli Group](https://users.encs.concordia.ca/~idak/). During my PhD, I studied **mixing dynamics of viscoplastic fluids**.
 
 I am interested in studying **non-Newtonian**, **multiphase**, and **turbulent flows** both **experimentally** and **numerically**.
+
+---
+
+### Viscoelastic hollow droplets
+
+The impact dynamics of hollow droplets, while critical in applications like coating and spraying, remain less explored than their dense counterparts, particularly for non-Newtonian fluids. This work presents an experimental investigation into the impact of hollow Newtonian (water) and viscoelastic (polymeric solution) droplets on a solid surface. We demonstrate two hallmark features of hollow droplet flattening: the formation of a central counter-jet and the final deposition, both stemming from the rupture of an entrapped air bubble. For Newtonian impacts, the counter-jet exhibits rapid growth and breakup due to capillary instabilities. Introducing polymer additives fundamentally alters this behavior: viscoelasticity suppresses the counter-jet's height and velocity due to enhanced viscous dissipation, delays bubble rupture, and inhibits droplet detachment. Crucially, we observe the emergence of beads-on-a-string structures during filament thinning, a signature of the competition between elastic and capillary forces. By systematically varying the polymer concentration and impact velocity, we construct a regime map (deposition, partial deposition, rebound) in the Weber–Deborah number phase space. Our results elucidate the intricate interplay between inertia, viscosity, capillarity, and elasticity that governs the splashing morphology of hollow non-Newtonian droplets.
+
+<br>
+<img src="images/droplet.gif" width=500>
+
+*Related publications*
+- M.M. Nasiri, **M.R. Daneshvar Garmroodi**, D.C. Vadillo, & M. Tembely (2025). **[Experimental study of polymer hollow droplet impact]()**. *submitted to Journal of non-Newtonian Fluid Mechanics*.
+
 
 ---
 
