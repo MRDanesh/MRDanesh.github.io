@@ -5,17 +5,20 @@ title: "Research"
 ## Research
 
 I am a Postdoctoral Research Fellow in [Ida Karimfazli Group](https://users.encs.concordia.ca/~idak/). Fluid mechanician and machine learning engineer with a solid foundation in applied mathematics and dynamical systems. I work at the intersection of physics and data, transforming high-dimensional flow fields, sparse sensor measurements, and complex transport phenomena into interpretable, predictive models. 
-My focus is on data-driven modeling, reduced-order representations, and learning-based control of physical systems with a particular interest in studying **Convective heat transfer**, **non-Newtonian**, **multiphase**, and **turbulent flows** through numerical approach.
+My focus is on data-driven modeling, reduced-order representations, and learning-based control of physical systems with a particular interest in studying **turbulent**, **non-Newtonian**, **multiphase**, and **Convective heat transfer flows**, through numerical approach.
 
 ---
 
-### Sparse and Physics-Informed Reconstruction of Cylinder Wake Flow
+### Sparse and Physics-Informed Reconstruction of Fluid Flows
 
 This project explores two fundamentally different approaches for reconstructing high-dimensional fluid flow fields from sparse sensor measurements, using the classic 2D incompressible cylinder wake dataset. The goal is to recover the full velocity and pressure fields from only a limited number of spatial sensors. I implemented and compared a sparse snapshot-based method rooted in compressed sensing theory and a Physics-Informed Neural Network (PINN) approach that enforces the Navier–Stokes equations during training.
 
 The sparse method assumes that any flow snapshot can be represented as a sparse combination of previously observed snapshots. By solving a LASSO optimization problem, the reconstruction selects only a few relevant training snapshots that best match the sensor measurements. This approach is fast, interpretable, and highly accurate when the test flow lies within the span of the training data, but it is fundamentally interpolation-based and does not enforce physical laws.
 
 In contrast, the PINN approach learns a neural network that maps space and time coordinates directly to velocity and pressure while minimizing both data mismatch and the residuals of the governing Navier–Stokes equations. This physics-constrained framework produces smooth, physically consistent reconstructions and can generalize beyond the training snapshots. Comparing these two paradigms highlights the tradeoff between sparse data-driven interpolation and physics-informed learning for reconstructing complex dynamical systems from limited observations.
+
+- The codes and mathematical formulations are available on my **[GitHub](https://github.com/MRDanesh/Sparse_PINNs)**.
+
 
 <div class="two-figs">
     <figure>
@@ -49,15 +52,58 @@ In contrast, the PINN approach learns a neural network that maps space and time 
 
 ---
 
+### Buoyancy-Driven Melting in Phase-Change Materials With Embedded Heat Spreaders
+
+I built a simplified benchmark model to study how embedded high-conductivity inserts can improve heat transport in phase-change materials (PCMs). 
+The system is heated from the top at a fixed temperature and insulated at the bottom, mimicking a sink-limited scenario where heat must be redistributed internally rather than rejected externally. 
+By testing multiple conductor topologies, I quantify their impact on melting rate, latent heat utilization, and the onset of buoyancy-driven flow in the melted PCM. 
+The outcome is a set of design insights for using conductor networks to reduce hot-side temperatures and promote more uniform melting.
+
+To simulate the melting process, an enthalpy based model is developed in OpenFOAM version 7. The solver is validated by previous studies. 
+The codes are available on my **[GitHub](https://github.com/MRDanesh/conjugateMeltingFOAM)**.
+
+<br>
+<img src="images/PCM.gif" width=500>
+
+*Related publications*
+- **M.R. Daneshvar Garmroodi**, & I. Karimfazli . **Enhancement of buoyancy-driven melting**. *Under preparation*.
+
+
+---
+
+### From Jet Collision to Emulsion Quality: Nozzle Dynamics and Mixing development
+
+Efficient conditioning of oil-based drilling fluids (OBMs) is essential for maintaining stable rheological and dispersion properties during offshore drilling operations. Recently, the dual shear gun has been proposed as a compact, high-throughput device for rapid drilling-fluid conditioning through a combination of intense nozzle-scale shearing and downstream jet mixing. Despite promising experimental demonstrations, a predictive framework linking operating conditions to emulsion refinement within the device remains lacking.
+In this study, we develop a nozzle-resolved numerical model to investigate the hydrodynamics and emulsion droplet breakup occurring in the converging nozzle of a dual shear gun. The flow is modeled as turbulent and axisymmetric, with the drilling fluid represented by a Herschel-Bulkley constitutive law. A pressure-driven formulation is employed to examine how the imposed pressure drop across the nozzle influences velocity fields, shear rates, and turbulent dissipation. The Kolmogorov-Hinze framework is then used to estimate breakup-limited droplet sizes as a function of radial position.
+The results show that, while increasing pressure drop enhances near-wall shear rates, the overall mean flow structure remains broadly similar across operating conditions. Consequently, single-pass droplet refinement exhibits only modest sensitivity to pressure drop. To capture the cumulative effect of conditioning, we introduce an iterative, flow-weighted model that tracks the evolution of the droplet-size contribution over successive circulations through the nozzle. The model predicts that repeated passes progressively suppress larger droplets, leading to a reduction of the mean characteristic droplet size by an order of magnitude after only a few circulations.
+
+An eddy-viscosity turbulence solver is developed in OpenFOAM, to model viscoplastic turbulent flows.
+The turbulence model is previously derived by **[Lovato et al](https://doi.org/10.1016/j.jnnfm.2021.104729)**. The developed solver and validation case is available in my **[GitHub](https://github.com/MRDanesh/non-Newtonian-RANS)**.
+
+
+
+
+*Related publications*
+- **M.R. Daneshvar Garmroodi**, & I. Karimfazli (2026). **A Novel Itterative Method to Enhance Emulsion Quality in Non-Newtonian Fluids**. *Journal paper under preparation*.
+- **M.R. Daneshvar Garmroodi**, & I. Karimfazli (2026). **From Jet Collision to Emulsion Quality: Nozzle Dynamics**. *45th International Conference on Ocean, Offshore and Arctic Engineering*.
+- **M.R. Daneshvar Garmroodi**, & I. Karimfazli (2026). **From Jet Collision to Emulsion Quality: Fluid Mixing**. *45th International Conference on Ocean, Offshore and Arctic Engineering*.
+
+---
+
 ### Viscoelastic hollow droplets
 
-The impact dynamics of hollow droplets, while critical in applications like coating and spraying, remain less explored than their dense counterparts, particularly for non-Newtonian fluids. This work presents an experimental investigation into the impact of hollow Newtonian (water) and viscoelastic (polymeric solution) droplets on a solid surface. We demonstrate two hallmark features of hollow droplet flattening: the formation of a central counter-jet and the final deposition, both stemming from the rupture of an entrapped air bubble. For Newtonian impacts, the counter-jet exhibits rapid growth and breakup due to capillary instabilities. Introducing polymer additives fundamentally alters this behavior: viscoelasticity suppresses the counter-jet's height and velocity due to enhanced viscous dissipation, delays bubble rupture, and inhibits droplet detachment. Crucially, we observe the emergence of beads-on-a-string structures during filament thinning, a signature of the competition between elastic and capillary forces. By systematically varying the polymer concentration and impact velocity, we construct a regime map (deposition, partial deposition, rebound) in the Weber–Deborah number phase space. Our results elucidate the intricate interplay between inertia, viscosity, capillarity, and elasticity that governs the splashing morphology of hollow non-Newtonian droplets.
+The impact dynamics of hollow droplets, while critical in applications like coating and spraying, remain less explored than their dense counterparts, particularly for non-Newtonian fluids. 
+This work presents an experimental investigation into the impact of hollow Newtonian (water) and viscoelastic (polymeric solution) droplets on a solid surface. 
+We demonstrate two hallmark features of hollow droplet flattening: the formation of a central counter-jet and the final deposition, both stemming from the rupture of an entrapped air bubble. For Newtonian impacts, the counter-jet exhibits rapid growth and breakup due to capillary instabilities. 
+Introducing polymer additives fundamentally alters this behavior: viscoelasticity suppresses the counter-jet's height and velocity due to enhanced viscous dissipation, delays bubble rupture, and inhibits droplet detachment. 
+Crucially, we observe the emergence of beads-on-a-string structures during filament thinning, a signature of the competition between elastic and capillary forces. 
+By systematically varying the polymer concentration and impact velocity, we construct a regime map (deposition, partial deposition, rebound) in the Weber–Deborah number phase space. Our results elucidate the intricate interplay between inertia, viscosity, capillarity, and elasticity that governs the splashing morphology of hollow non-Newtonian droplets.
 
 <br>
 <img src="images/droplet.gif" width=500>
 
 *Related publications*
-- M.M. Nasiri, **M.R. Daneshvar Garmroodi**, D.C. Vadillo, & M. Tembely (2025). **[Experimental study of polymer hollow droplet impact]()**. *submitted to Physics of Fluids Journal*.
+- M.M. Nasiri, **M.R. Daneshvar Garmroodi**, D.C. Vadillo, & M. Tembely (2025). **Experimental study of polymer hollow droplet impact**. *submitted to Physics of Fluids*.
 
 
 ---
@@ -72,7 +118,7 @@ distinct mixing regimes in yield-stress fluids: (i) Regime SE, where shed vortic
 
 *Related publications*
 - **M.R. Daneshvar Garmroodi**, & I. Karimfazli (2025). **[Yield-Stress Fluid Mixing: Localization Mechanisms and Regime Transitions]( https://doi.org/10.1017/jfm.2025.10729)**. *Journal of Fluid Mechanics*.
-- **M.R. Daneshvar Garmroodi**, & I. Karimfazli (2025). **[Two-dimensional mixing stirred system, mixing regimes and transitions]()**. *Under preparation*.
+- **M.R. Daneshvar Garmroodi**, & I. Karimfazli (2025). **[Two-dimensional mixing stirred system, mixing regimes and transitions]()**. *Submitted to Physics of Fluids*.
 
 ---
 
