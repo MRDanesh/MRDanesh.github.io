@@ -4,9 +4,48 @@ title: "Research"
 
 ## Research
 
-I am a Postdoctoral Research Fellow in [Ida Karimfazli Group](https://users.encs.concordia.ca/~idak/). During my PhD, I studied **mixing dynamics of viscoplastic fluids**.
+I am a Postdoctoral Research Fellow in [Ida Karimfazli Group](https://users.encs.concordia.ca/~idak/). Fluid mechanician and machine learning engineer with a solid foundation in applied mathematics and dynamical systems. I work at the intersection of physics and data, transforming high-dimensional flow fields, sparse sensor measurements, and complex transport phenomena into interpretable, predictive models. 
+My focus is on data-driven modeling, reduced-order representations, and learning-based control of physical systems with a particular interest in studying **Convective heat transfer**, **non-Newtonian**, **multiphase**, and **turbulent flows** through numerical approach.
 
-I am interested in studying **non-Newtonian**, **multiphase**, and **turbulent flows** both **experimentally** and **numerically**.
+---
+
+### Sparse and Physics-Informed Reconstruction of Cylinder Wake Flow
+
+This project explores two fundamentally different approaches for reconstructing high-dimensional fluid flow fields from sparse sensor measurements, using the classic 2D incompressible cylinder wake dataset. The goal is to recover the full velocity and pressure fields from only a limited number of spatial sensors. I implemented and compared a sparse snapshot-based method rooted in compressed sensing theory and a Physics-Informed Neural Network (PINN) approach that enforces the Navier–Stokes equations during training.
+
+The sparse method assumes that any flow snapshot can be represented as a sparse combination of previously observed snapshots. By solving a LASSO optimization problem, the reconstruction selects only a few relevant training snapshots that best match the sensor measurements. This approach is fast, interpretable, and highly accurate when the test flow lies within the span of the training data, but it is fundamentally interpolation-based and does not enforce physical laws.
+
+In contrast, the PINN approach learns a neural network that maps space and time coordinates directly to velocity and pressure while minimizing both data mismatch and the residuals of the governing Navier–Stokes equations. This physics-constrained framework produces smooth, physically consistent reconstructions and can generalize beyond the training snapshots. Comparing these two paradigms highlights the tradeoff between sparse data-driven interpolation and physics-informed learning for reconstructing complex dynamical systems from limited observations.
+
+<div class="two-figs">
+    <figure>
+      <img src="/images/sparse.png" alt="Sparse reconstruction result" />
+      <figcaption>Sparse snapshot method (LASSO) result.</figcaption>
+    </figure>
+    <figure>
+      <img src="/images/PINNs.png" alt="PINN reconstruction result" />
+      <figcaption>PINN (Navier–Stokes) result.</figcaption>
+    </figure>
+</div>
+
+<style>
+  .two-figs{
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .two-figs figure{
+    flex: 1;              /* each figure takes half width */
+    margin: 0;            /* remove default figure margins */
+  }
+
+  .two-figs img{
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+</style>
 
 ---
 
@@ -18,7 +57,7 @@ The impact dynamics of hollow droplets, while critical in applications like coat
 <img src="images/droplet.gif" width=500>
 
 *Related publications*
-- M.M. Nasiri, **M.R. Daneshvar Garmroodi**, D.C. Vadillo, & M. Tembely (2025). **[Experimental study of polymer hollow droplet impact]()**. *submitted to Journal of non-Newtonian Fluid Mechanics*.
+- M.M. Nasiri, **M.R. Daneshvar Garmroodi**, D.C. Vadillo, & M. Tembely (2025). **[Experimental study of polymer hollow droplet impact]()**. *submitted to Physics of Fluids Journal*.
 
 
 ---
