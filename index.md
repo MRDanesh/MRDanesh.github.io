@@ -4,10 +4,10 @@ title: "Research"
 
 ## Research
 
-I am a Postdoctoral Research Fellow in [Ida Karimfazli Group](https://users.encs.concordia.ca/~idak/). Fluid mechanician and machine learning engineer with a solid foundation in applied mathematics and dynamical systems. I work at the intersection of physics and data, transforming high-dimensional flow fields, sparse sensor measurements, and complex transport phenomena into interpretable, predictive models. 
-My focus is on data-driven modeling, reduced-order representations, and learning-based control of physical systems with a particular interest in studying **turbulent**, **non-Newtonian**, **multiphase**, and **Convective heat transfer flows**, through numerical approach.
+I am a Postdoctoral Research Fellow in [Ida Karimfazli Group](https://users.encs.concordia.ca/~idak/). **Fluid mechanician** and **machine learning engineer** with a solid foundation in applied mathematics and dynamical systems. I work at the intersection of physics and data, transforming high-dimensional flow fields, sparse sensor measurements, and complex transport phenomena into interpretable, predictive models. 
+My focus is on **data-driven modeling**, **reduced-order representations**, and **learning-based control of physical systems** with a particular interest in studying **turbulent**, **non-Newtonian**, **multiphase**, and **Convective heat transfer flows**.
 
----
+--
 
 ### Sparse and Physics-Informed Reconstruction of Fluid Flows
 
@@ -49,6 +49,40 @@ In contrast, the PINN approach learns a neural network that maps space and time 
     display: block;
   }
 </style>
+
+
+
+---
+
+### Interpretable Reduced-Order Model for Periodic Flows: POD Oscillators vs DMD
+
+This project compares two classic reduced-order modeling approaches for predicting the 2D cylinder wake flow field from simulation snapshots:
+
+POD-based ROM (4 modes): POD is computed on the training window to obtain dominant spatial modes. 
+The corresponding temporal coefficients are modeled as oscillatory signals. 
+Two dominant frequencies are estimated from coefficient phase dynamics, and each coefficient is fit with a sinusoidal regression model. 
+The predicted coefficients are then used to reconstruct the flow field in the test window.
+
+DMD (rank 4): DMD is trained on the same training window to identify a low-rank linear time-advance model. 
+The learned DMD modes and eigenvalues are used to roll out the dynamics and predict the test snapshots directly in the field space.
+
+The goal is to provide a clean, interpretable ROM baseline for periodic flows and a comparison between POD-based coefficient modeling and DMD-based spectral prediction.
+
+- The codes and mathematical formulations are available on my **[GitHub](https://github.com/MRDanesh/POD_DMD)**.
+
+
+<div>
+    <figure>
+      <img src="/images/POD.png" alt="Sparse reconstruction result" />
+      <figcaption>POD prediction.</figcaption>
+    </figure>
+    
+   <figure>
+      <img src="/images/POD.png" alt="Sparse reconstruction result" />
+      <figcaption>DMD prediction.</figcaption>
+    </figure>
+</div>
+
 
 ---
 
