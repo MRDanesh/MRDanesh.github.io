@@ -4,8 +4,8 @@ title: "Research"
 
 ## Research
 
-I am a Postdoctoral Research Fellow in [Ida Karimfazli Group](https://users.encs.concordia.ca/~idak/). **Fluid mechanician** and **machine learning engineer** with a solid foundation in applied mathematics and dynamical systems. I work at the intersection of physics and data, transforming high-dimensional flow fields, sparse sensor measurements, and complex transport phenomena into interpretable, predictive models. 
-My focus is on **data-driven modeling**, **reduced-order representations**, and **learning-based control of physical systems** with a particular interest in studying **turbulent**, **non-Newtonian**, **multiphase**, and **Convective heat transfer flows**.
+I am a fluid mechanician with a strong foundation in computational fluid dynamics and applied mathematics. I develop simplified model problems that capture the essential physics of real-world and industrial systems, with particular interest in non-Newtonian, multiphase, turbulent, and heat transfer phenomena.
+I am also interested in **reinforcement learning**, **data-driven modeling**, **reduced-order representations**, and **learning-based control of physical systems**.
 
 --
 
