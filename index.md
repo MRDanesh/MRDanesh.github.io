@@ -1,8 +1,5 @@
 
 
-
-<div class="research-section">
-
 ## Research
 
 I am a fluid mechanician with a strong foundation in computational fluid dynamics and applied mathematics. I develop simplified model problems that capture the essential physics of real-world and industrial systems, with particular interest in **non-Newtonian**, **multiphase**, **turbulent**, and **heat transfer** phenomena.
@@ -183,4 +180,3 @@ flows of waxy crude oil/water in inclined pipes](https://doi.org/10.1016/j.cherd
 - **M.R. Daneshvar Garmroodi**, & A. Ahmadpour (2020). **[A numerical study on two-phase core-annular
 flows of waxy crude oil/water in inclined pipes](https://doi.org/10.1016/j.petrol.2020.107458)**. *Journal of Petroleum Science and Engineering*.
 
-</div>
