@@ -1,10 +1,22 @@
 
+<style>
+  .about-text p {
+      text-align: justify;
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+</style>
 
 ## Research
 
-I am a fluid mechanician with a strong foundation in computational fluid dynamics and applied mathematics. I develop simplified model problems that capture the essential physics of real-world and industrial systems, with particular interest in **non-Newtonian**, **multiphase**, **turbulent**, and **heat transfer** phenomena.
-I am also interested in **reinforcement learning**, **data-driven modeling**, **reduced-order representations**, and **learning-based control of physical systems**.
-
+<div class="about-text">
+  <p>
+    I am a fluid mechanician with a strong foundation in computational fluid dynamics and applied mathematics. I develop simplified model problems that capture the essential physics of real-world and industrial systems, with particular interest in <strong>non-Newtonian</strong>, <strong>multiphase</strong>, <strong>turbulent</strong>, and <strong>heat transfer</strong> phenomena.
+  </p>
+  <p>
+    I am also interested in <strong>reinforcement learning</strong>, <strong>data-driven modeling</strong>, <strong>reduced-order representations</strong>, and <strong>learning-based control of physical systems</strong>.
+  </p>
+</div>
 --
 
 ### Mixing localization in yield-stress fluids
