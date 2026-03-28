@@ -2,7 +2,7 @@
 <style>
   .about-text p {
       text-align: justify;
-      line-height: 1.7;
+      line-height: 1.6;
       margin-bottom: 1rem;
     }
 </style>
@@ -14,14 +14,17 @@
     I am a fluid mechanician with a strong foundation in computational fluid dynamics and applied mathematics. I develop simplified model problems that capture the essential physics of real-world and industrial systems, with particular interest in <strong>non-Newtonian</strong>, <strong>multiphase</strong>, <strong>turbulent</strong>, and <strong>heat transfer</strong> phenomena.
   </p>
   <p>
-    I am also interested in <strong>reinforcement learning</strong>, <strong>data-driven modeling</strong>, <strong>reduced-order representations</strong>, and <strong>learning-based control of physical systems</strong>.
+    I am also interested in <strong>data-driven methods</strong>,  <strong>reinforcement learning</strong>, and <strong>reduced-order representations</strong>.
   </p>
 </div>
 --
 
 ### Mixing localization in yield-stress fluids
 
-We explore the mechanisms and regimes of mixing in yield-stress fluids by simulating the stirring of an infinite, two-dimensional domain filled with a Bingham fluid. A cylindrical stirrer moves along a circular path at constant speed to stir the fluid, with an initially quiescent domain marked by a passive dye in the lower half, facilitating the analysis of dye interface evolution and mixing dynamics. We first examine the mixing process in Newtonian fluids, identifying three key mechanisms: interface stretching and folding around the stirrer’s path, diffusion across streamlines, and dye advection and interface stretching due to vortex shedding. Introducing yield stress into the system leads to notable localization effects in mixing, manifesting through three mechanisms: advection of vortices within a finite distance of the stirrer, vortex entrapment near the stirrer, and complete suppression of vortex shedding at high yield stresses. Based on these mechanisms, we classify three
+The primary objective of this study is to identify and
+elucidate the mechanisms behind different mixing regimes and localization in yield stress
+fluids.
+We studied the stirring of an infinite, two-dimensional domain filled with a Bingham fluid. A cylindrical stirrer moves along a circular path at constant speed to stir the fluid, with an initially quiescent domain marked by a passive dye in the lower half, facilitating the analysis of dye interface evolution and mixing dynamics. We first examine the mixing process in Newtonian fluids, identifying three key mechanisms: interface stretching and folding around the stirrer’s path, diffusion across streamlines, and dye advection and interface stretching due to vortex shedding. Introducing yield stress into the system leads to notable localization effects in mixing, manifesting through three mechanisms: advection of vortices within a finite distance of the stirrer, vortex entrapment near the stirrer, and complete suppression of vortex shedding at high yield stresses. Based on these mechanisms, we classify three
 distinct mixing regimes in yield-stress fluids: (i) Regime SE, where shed vortices escape the central region, (ii) Regime ST, where shed vortices remain trapped near the stirrer, and (iii) Regime NS, where no vortex shedding occurs. These regimes are quantitatively distinguished through spectral analysis of energy oscillations, revealing transitions and the critical Bingham and Reynolds numbers. The transitions are captured through effective Reynolds numbers, supporting a hypothesis that mixing regime transitions in yield-stress fluids share fundamental characteristics with bluff-body flow dynamics. The findings provide a mechanistic framework for understanding and predicting mixing behaviors in yield-stress fluids, suggesting that the localization mechanisms and mixing regimes observed here are archetypal for stirred-tank applications.
 
 <br>
@@ -29,7 +32,7 @@ distinct mixing regimes in yield-stress fluids: (i) Regime SE, where shed vortic
 
 *Related publications*
 - **M.R. Daneshvar Garmroodi**, & I. Karimfazli (2025). **[Yield-Stress Fluid Mixing: Localization Mechanisms and Regime Transitions]( https://doi.org/10.1017/jfm.2025.10729)**. *Journal of Fluid Mechanics*.
-- **M.R. Daneshvar Garmroodi**, & I. Karimfazli (2025). **[Two-dimensional mixing stirred system, mixing regimes and transitions]()**. *Submitted to Physics of Fluids*.
+- **M.R. Daneshvar Garmroodi**, & I. Karimfazli (2025). **[Two-dimensional mixing stirred system, mixing regimes and transitions]()**. *Under review to Physics of Fluids*.
 
 ---
 
@@ -125,12 +128,14 @@ The goal is to provide a clean, interpretable ROM baseline for periodic flows an
 
 ### Buoyancy-Driven Melting in Phase-Change Materials With Embedded Heat Spreaders
 
-I built a simplified benchmark model to study how embedded high-conductivity inserts can improve heat transport in phase-change materials (PCMs). 
+One of the issues in thermal management in photovoltaic panels or electronic cooling devices is unefficient usage of phase change materials (PCMs). 
+The issue raises from lac of natural convection inside the melted PCM. 
+In this work, we built a simplified benchmark model to study how embedded high-conductivity inserts can improve heat transport in PCMs. 
 The system is heated from the top at a fixed temperature and insulated at the bottom, mimicking a sink-limited scenario where heat must be redistributed internally rather than rejected externally. 
-By testing multiple conductor topologies, I quantify their impact on melting rate, latent heat utilization, and the onset of buoyancy-driven flow in the melted PCM. 
+By testing multiple conductor topologies, we quantify their impact on latent heat utilization, and the onset of buoyancy-driven flow in the melted PCM. 
 The outcome is a set of design insights for using conductor networks to reduce hot-side temperatures and promote more uniform melting.
 
-To simulate the melting process, an enthalpy based model is developed in OpenFOAM version 7. The solver is validated by previous studies. 
+To simulate the melting process, an enthalpy based solver is developed in OpenFOAM version 7. 
 The codes are available on my **[GitHub](https://github.com/MRDanesh/conjugateMeltingFOAM)**.
 
 <br>
@@ -142,20 +147,28 @@ The codes are available on my **[GitHub](https://github.com/MRDanesh/conjugateMe
 
 ---
 
-### From Jet Collision to Emulsion Quality: Nozzle Dynamics and Mixing development
+### From Jet Collision to Emulsion Quality: Nozzle Dynamics and Recirculation
 
-Efficient conditioning of oil-based drilling fluids (OBMs) is essential for maintaining stable rheological and dispersion properties during offshore drilling operations. Recently, the dual shear gun has been proposed as a compact, high-throughput device for rapid drilling-fluid conditioning through a combination of intense nozzle-scale shearing and downstream jet mixing. Despite promising experimental demonstrations, a predictive framework linking operating conditions to emulsion refinement within the device remains lacking.
-In this study, we develop a nozzle-resolved numerical model to investigate the hydrodynamics and emulsion droplet breakup occurring in the converging nozzle of a dual shear gun. The flow is modeled as turbulent and axisymmetric, with the drilling fluid represented by a Herschel-Bulkley constitutive law. A pressure-driven formulation is employed to examine how the imposed pressure drop across the nozzle influences velocity fields, shear rates, and turbulent dissipation. The Kolmogorov-Hinze framework is then used to estimate breakup-limited droplet sizes as a function of radial position.
-The results show that, while increasing pressure drop enhances near-wall shear rates, the overall mean flow structure remains broadly similar across operating conditions. Consequently, single-pass droplet refinement exhibits only modest sensitivity to pressure drop. To capture the cumulative effect of conditioning, we introduce an iterative, flow-weighted model that tracks the evolution of the droplet-size contribution over successive circulations through the nozzle. The model predicts that repeated passes progressively suppress larger droplets, leading to a reduction of the mean characteristic droplet size by an order of magnitude after only a few circulations.
+Efficient conditioning of oil-based drilling fluids is essential for maintaining stable rheological and dispersion properties during offshore drilling operations. 
+Recently, the **[Dual Shear Gun](https://jagtech.no/dual-shear-gun/)** has been proposed as a compact, high-throughput device for rapid drilling-fluid conditioning through a combination of intense nozzle-scale shearing and downstream jet mixing. Despite promising experimental demonstrations, a predictive framework linking operating conditions to emulsion refinement within the device remains lacking.
 
-An eddy-viscosity turbulence solver is developed in OpenFOAM, to model viscoplastic turbulent flows.
-The turbulence model is previously derived by **[Lovato et al](https://doi.org/10.1016/j.jnnfm.2021.104729)**. The developed solver and validation case is available in my **[GitHub](https://github.com/MRDanesh/non-Newtonian-RANS)**.
+In this study with **[SINTEFF](https://www.sintef.no/en/)** collaboration, we develop two model problems; 
+a nozzle-resolved numerical model to investigate the hydrodynamics and emulsion droplet breakup occurring in the converging nozzle of a Dual Shear Gun,
+and a model problem for the mixing chamber to understand the effect of two jets on the recirculation of injected fluids.
+The flow is modeled as turbulent, with the drilling fluid represented by a non-Newtonian Herschel-Bulkley constitutive law. 
 
+The results from the nozzle-resolved model show that, while increasing pressure drop enhances near-wall shear rates, the overall mean flow structure remains broadly similar across operating conditions. 
+Consequently, single-pass droplet refinement exhibits only modest sensitivity to pressure drop. To capture the cumulative effect of conditioning, we introduce an iterative, flow-weighted model that tracks the evolution of the droplet-size contribution over successive circulations through the nozzle. 
+The model predicts that repeated passes progressively suppress larger droplets, leading to a reduction of the mean characteristic droplet size by an order of magnitude after only a few circulations.
+From the mixing chamber model, we show that when two jets are close to each other, they oscillate periodically, increasing recirculation in the chamber.
+
+An eddy-viscosity turbulence solver is developed in OpenFOAM to model viscoplastic turbulent flows.
+The turbulence model was previously derived by **[Lovato et al](https://doi.org/10.1016/j.jnnfm.2021.104729)**. The developed solver and validation case are available in my **[GitHub](https://github.com/MRDanesh/non-Newtonian-RANS)**.
 
 
 
 *Related publications*
-- **M.R. Daneshvar Garmroodi**, & I. Karimfazli (2026). **A Novel Itterative Method to Enhance Emulsion Quality in Non-Newtonian Fluids**. *Journal paper under preparation*.
+- **M.R. Daneshvar Garmroodi**, & I. Karimfazli (2026). **A Novel Itterative Method to Enhance Emulsion Quality in Non-Newtonian Fluids**. *under preparation for Jorunal of non-Newtonian Fluid Mechanics*.
 - **M.R. Daneshvar Garmroodi**, & I. Karimfazli (2026). **From Jet Collision to Emulsion Quality: Nozzle Dynamics**. *45th International Conference on Ocean, Offshore and Arctic Engineering*.
 - **M.R. Daneshvar Garmroodi**, & I. Karimfazli (2026). **From Jet Collision to Emulsion Quality: Fluid Mixing**. *45th International Conference on Ocean, Offshore and Arctic Engineering*.
 
