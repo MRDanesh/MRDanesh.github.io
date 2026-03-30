@@ -14,10 +14,22 @@
     I am a fluid mechanician with a strong foundation in computational fluid dynamics and applied mathematics. I develop simplified model problems that capture the essential physics of real-world and industrial systems, with particular interest in <strong>non-Newtonian</strong>, <strong>multiphase</strong>, <strong>turbulent</strong>, and <strong>heat transfer</strong> phenomena.
   </p>
   <p>
-    I am also interested in <strong>data-driven methods</strong>,  <strong>reinforcement learning</strong>, and <strong>reduced-order representations</strong>.
+    I am also interested in <strong>data-driven methods</strong> and  <strong>reinforcement learning</strong>.
   </p>
 </div>
---
+
+---
+
+### Rayleigh-Bénard convection control by reinforcement learning 
+
+I am interested in reinforcement learning and have studied foundational material including **[professor Chandar course](https://www.youtube.com/watch?v=J9JZyyPCJcQ&list=PLImtCgowF_ES_JdF_UcM60EXTcGZg67Ua)** and **[Richard Sutton book](http://incompleteideas.net/book/the-book-2nd.html)**.
+As a self-driven project, I developed a reinforcement learning framework to control Rayleigh–Bénard convection by dynamically adjusting the bottom wall temperature.
+The idea of this work comes from the **[Beintema et al](https://doi.org/10.1080/14685248.2020.1797059)** study. 
+To implement this, I coupled OpenFOAM with Python and applied the Proximal Policy Optimization (PPO) algorithm to learn control strategies for the flow.
+
+    
+
+---
 
 ### Mixing localization in yield-stress fluids
 
@@ -32,7 +44,7 @@ distinct mixing regimes in yield-stress fluids: (i) Regime SE, where shed vortic
 
 *Related publications*
 - **M.R. Daneshvar Garmroodi**, & I. Karimfazli (2025). **[Yield-Stress Fluid Mixing: Localization Mechanisms and Regime Transitions]( https://doi.org/10.1017/jfm.2025.10729)**. *Journal of Fluid Mechanics*.
-- **M.R. Daneshvar Garmroodi**, & I. Karimfazli (2025). **[Two-dimensional mixing stirred system, mixing regimes and transitions]()**. *Under review to Physics of Fluids*.
+- **M.R. Daneshvar Garmroodi**, & I. Karimfazli (2025). **[Two-dimensional mixing stirred system, mixing regimes and transitions]()**. *Under review in Physics of Fluids*.
 
 ---
 
@@ -94,6 +106,73 @@ In contrast, the PINN approach learns a neural network that maps space and time 
 
 ---
 
+### Buoyancy-Driven Melting in Phase-Change Materials With Embedded Heat Spreaders
+
+One of the issues in thermal management in photovoltaic panels or electronic cooling devices is unefficient usage of phase change materials (PCMs). 
+The issue raises from lac of natural convection inside the melted PCM. 
+In this work, we built a simplified benchmark model to study how embedded high-conductivity inserts can improve heat transport in PCMs. 
+The system is heated from the top at a fixed temperature and insulated at the bottom, mimicking a sink-limited scenario where heat must be redistributed internally rather than rejected externally. 
+By testing multiple conductor topologies, we quantify their impact on latent heat utilization, and the onset of buoyancy-driven flow in the melted PCM. 
+The outcome is a set of design insights for using conductor networks to reduce hot-side temperatures and promote more uniform melting.
+
+To simulate the melting process, an enthalpy based solver is developed in OpenFOAM. 
+The codes are available on my **[GitHub](https://github.com/MRDanesh/conjugateMeltingFOAM)**.
+
+<br>
+<img src="images/PCM.gif" width=500>
+
+*Related publications*
+- **M.R. Daneshvar Garmroodi**, & I. Karimfazli . **Enhancement of buoyancy-driven melting**. *Under preparation for International Journal of Heat and Mass Transfer*.
+
+
+---
+
+### From Jet Collision to Emulsion Quality: Nozzle Dynamics and Recirculation
+
+Efficient conditioning of oil-based drilling fluids is essential for maintaining stable rheological and dispersion properties during offshore drilling operations. 
+Recently, the **[Dual Shear Gun](https://jagtech.no/dual-shear-gun/)** has been proposed as a compact, high-throughput device for rapid drilling-fluid conditioning through a combination of intense nozzle-scale shearing and downstream jet mixing. Despite promising experimental demonstrations, a predictive framework linking operating conditions to emulsion refinement within the device remains lacking.
+
+In this study with **[SINTEFF](https://www.sintef.no/en/)** collaboration, we develop two model problems; 
+a nozzle-resolved numerical model to investigate the hydrodynamics and emulsion droplet breakup occurring in the converging nozzle of a Dual Shear Gun,
+and a model problem for the mixing chamber to understand the effect of two jets on the recirculation of injected fluids.
+The flow is modeled as turbulent, with the drilling fluid represented by a non-Newtonian Herschel-Bulkley constitutive law. 
+
+The results from the nozzle-resolved model show that, while increasing pressure drop enhances near-wall shear rates, the overall mean flow structure remains broadly similar across operating conditions. 
+Consequently, single-pass droplet refinement exhibits only modest sensitivity to pressure drop. To capture the cumulative effect of conditioning, we introduce an iterative, flow-weighted model that tracks the evolution of the droplet-size contribution over successive circulations through the nozzle. 
+The model predicts that repeated passes progressively suppress larger droplets, leading to a reduction of the mean characteristic droplet size by an order of magnitude after only a few circulations.
+From the mixing chamber model, we show that when two jets are close to each other, they oscillate periodically, increasing recirculation in the chamber.
+
+An eddy-viscosity turbulence solver is developed in OpenFOAM to model viscoplastic turbulent flows.
+The turbulence model was previously derived by **[Lovato et al](https://doi.org/10.1016/j.jnnfm.2021.104729)**. The developed solver and validation case are available in my **[GitHub](https://github.com/MRDanesh/non-Newtonian-RANS)**.
+
+<br>
+<img src="images/SINTEFF.gif" width=500>
+
+*Related publications*
+- **M.R. Daneshvar Garmroodi**, & I. Karimfazli (2026). **A Novel Itterative Method to Enhance Emulsion Quality in Non-Newtonian Fluids**. *under preparation for Jorunal of non-Newtonian Fluid Mechanics*.
+- **M.R. Daneshvar Garmroodi**, & I. Karimfazli (2026). **From Jet Collision to Emulsion Quality: Nozzle Dynamics**. *45th International Conference on Ocean, Offshore and Arctic Engineering*.
+- **M.R. Daneshvar Garmroodi**, & I. Karimfazli (2026). **From Jet Collision to Emulsion Quality: Fluid Mixing**. *45th International Conference on Ocean, Offshore and Arctic Engineering*.
+
+---
+
+### Viscoelastic hollow droplets
+
+The impact dynamics of hollow droplets, while critical in applications like coating and spraying, remain less explored than their dense counterparts, particularly for non-Newtonian fluids. 
+This work presents an experimental investigation into the impact of hollow Newtonian (water) and viscoelastic (polymeric solution) droplets on a solid surface. 
+We demonstrate two hallmark features of hollow droplet flattening: the formation of a central counter-jet and the final deposition, both stemming from the rupture of an entrapped air bubble. For Newtonian impacts, the counter-jet exhibits rapid growth and breakup due to capillary instabilities. 
+Introducing polymer additives fundamentally alters this behavior: viscoelasticity suppresses the counter-jet's height and velocity due to enhanced viscous dissipation, delays bubble rupture, and inhibits droplet detachment. 
+Crucially, we observe the emergence of beads-on-a-string structures during filament thinning, a signature of the competition between elastic and capillary forces. 
+By systematically varying the polymer concentration and impact velocity, we construct a regime map (deposition, partial deposition, rebound) in the Weber–Deborah number phase space. Our results elucidate the intricate interplay between inertia, viscosity, capillarity, and elasticity that governs the splashing morphology of hollow non-Newtonian droplets.
+
+<br>
+<img src="images/droplet.gif" width=500>
+
+*Related publications*
+- M.M. Nasiri, **M.R. Daneshvar Garmroodi**, D.C. Vadillo, & M. Tembely (2025). **Experimental study of polymer hollow droplet impact**. *submitted to Physics of Fluids*.
+
+
+---
+
 ### Interpretable Reduced-Order Model for Periodic Flows: POD Oscillators vs DMD
 
 This project compares two classic reduced-order modeling approaches for predicting the 2D cylinder wake flow field from simulation snapshots:
@@ -122,72 +201,6 @@ The goal is to provide a clean, interpretable ROM baseline for periodic flows an
       <figcaption>DMD prediction.</figcaption>
     </figure>
 </div>
-
-
----
-
-### Buoyancy-Driven Melting in Phase-Change Materials With Embedded Heat Spreaders
-
-One of the issues in thermal management in photovoltaic panels or electronic cooling devices is unefficient usage of phase change materials (PCMs). 
-The issue raises from lac of natural convection inside the melted PCM. 
-In this work, we built a simplified benchmark model to study how embedded high-conductivity inserts can improve heat transport in PCMs. 
-The system is heated from the top at a fixed temperature and insulated at the bottom, mimicking a sink-limited scenario where heat must be redistributed internally rather than rejected externally. 
-By testing multiple conductor topologies, we quantify their impact on latent heat utilization, and the onset of buoyancy-driven flow in the melted PCM. 
-The outcome is a set of design insights for using conductor networks to reduce hot-side temperatures and promote more uniform melting.
-
-To simulate the melting process, an enthalpy based solver is developed in OpenFOAM version 7. 
-The codes are available on my **[GitHub](https://github.com/MRDanesh/conjugateMeltingFOAM)**.
-
-<br>
-<img src="images/PCM.gif" width=500>
-
-*Related publications*
-- **M.R. Daneshvar Garmroodi**, & I. Karimfazli . **Enhancement of buoyancy-driven melting**. *Under preparation*.
-
-
----
-
-### From Jet Collision to Emulsion Quality: Nozzle Dynamics and Recirculation
-
-Efficient conditioning of oil-based drilling fluids is essential for maintaining stable rheological and dispersion properties during offshore drilling operations. 
-Recently, the **[Dual Shear Gun](https://jagtech.no/dual-shear-gun/)** has been proposed as a compact, high-throughput device for rapid drilling-fluid conditioning through a combination of intense nozzle-scale shearing and downstream jet mixing. Despite promising experimental demonstrations, a predictive framework linking operating conditions to emulsion refinement within the device remains lacking.
-
-In this study with **[SINTEFF](https://www.sintef.no/en/)** collaboration, we develop two model problems; 
-a nozzle-resolved numerical model to investigate the hydrodynamics and emulsion droplet breakup occurring in the converging nozzle of a Dual Shear Gun,
-and a model problem for the mixing chamber to understand the effect of two jets on the recirculation of injected fluids.
-The flow is modeled as turbulent, with the drilling fluid represented by a non-Newtonian Herschel-Bulkley constitutive law. 
-
-The results from the nozzle-resolved model show that, while increasing pressure drop enhances near-wall shear rates, the overall mean flow structure remains broadly similar across operating conditions. 
-Consequently, single-pass droplet refinement exhibits only modest sensitivity to pressure drop. To capture the cumulative effect of conditioning, we introduce an iterative, flow-weighted model that tracks the evolution of the droplet-size contribution over successive circulations through the nozzle. 
-The model predicts that repeated passes progressively suppress larger droplets, leading to a reduction of the mean characteristic droplet size by an order of magnitude after only a few circulations.
-From the mixing chamber model, we show that when two jets are close to each other, they oscillate periodically, increasing recirculation in the chamber.
-
-An eddy-viscosity turbulence solver is developed in OpenFOAM to model viscoplastic turbulent flows.
-The turbulence model was previously derived by **[Lovato et al](https://doi.org/10.1016/j.jnnfm.2021.104729)**. The developed solver and validation case are available in my **[GitHub](https://github.com/MRDanesh/non-Newtonian-RANS)**.
-
-
-
-*Related publications*
-- **M.R. Daneshvar Garmroodi**, & I. Karimfazli (2026). **A Novel Itterative Method to Enhance Emulsion Quality in Non-Newtonian Fluids**. *under preparation for Jorunal of non-Newtonian Fluid Mechanics*.
-- **M.R. Daneshvar Garmroodi**, & I. Karimfazli (2026). **From Jet Collision to Emulsion Quality: Nozzle Dynamics**. *45th International Conference on Ocean, Offshore and Arctic Engineering*.
-- **M.R. Daneshvar Garmroodi**, & I. Karimfazli (2026). **From Jet Collision to Emulsion Quality: Fluid Mixing**. *45th International Conference on Ocean, Offshore and Arctic Engineering*.
-
----
-
-### Viscoelastic hollow droplets
-
-The impact dynamics of hollow droplets, while critical in applications like coating and spraying, remain less explored than their dense counterparts, particularly for non-Newtonian fluids. 
-This work presents an experimental investigation into the impact of hollow Newtonian (water) and viscoelastic (polymeric solution) droplets on a solid surface. 
-We demonstrate two hallmark features of hollow droplet flattening: the formation of a central counter-jet and the final deposition, both stemming from the rupture of an entrapped air bubble. For Newtonian impacts, the counter-jet exhibits rapid growth and breakup due to capillary instabilities. 
-Introducing polymer additives fundamentally alters this behavior: viscoelasticity suppresses the counter-jet's height and velocity due to enhanced viscous dissipation, delays bubble rupture, and inhibits droplet detachment. 
-Crucially, we observe the emergence of beads-on-a-string structures during filament thinning, a signature of the competition between elastic and capillary forces. 
-By systematically varying the polymer concentration and impact velocity, we construct a regime map (deposition, partial deposition, rebound) in the Weber–Deborah number phase space. Our results elucidate the intricate interplay between inertia, viscosity, capillarity, and elasticity that governs the splashing morphology of hollow non-Newtonian droplets.
-
-<br>
-<img src="images/droplet.gif" width=500>
-
-*Related publications*
-- M.M. Nasiri, **M.R. Daneshvar Garmroodi**, D.C. Vadillo, & M. Tembely (2025). **Experimental study of polymer hollow droplet impact**. *submitted to Physics of Fluids*.
 
 
 ---
