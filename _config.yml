@@ -1,24 +1,28 @@
-title: Mohammad Reza Daneshvar Garmroodi # your name (or website title) here
-logo: "/images/profile.png?raw=true" # your photo (or logo) here
-description: > # your text below (remove <br> elements if you don't need line breaks)
-  <br>
-  Postdoctoral Researcher
-  <br>
-  McMaster University
-  <br>
-  <a href="https://www.robinzhao.com/" target="_blank" rel="noopener noreferrer">Zhao Lab</a>, with Dr. Robin Zhao
-  <br><br>
-  non-Newtonian Fluid Mechanics | Mixing | Multiphase Flows | Turbulent Flows
-  <br><br>
-  <a href="./">Research</a>
-  <br>
-  <a href="./about_me">About Me</a>
-  <br>
-  <a href="./code">Codes</a>
-  <br><br>
-  <a href="https://scholar.google.com/citations?hl=en&user=QiQqIuAAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a> | <a href="https://www.linkedin.com/in/mohammad-reza-daneshvar-garmroodi-70224214b/">LinkedIn</a> | <a href="https://github.com/mrdanesh">Github</a> | <a href="./CV_MRDanesh.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+title: Mohammad Reza Daneshvar Garmroodi
+description: Postdoctoral researcher at McMaster University working on complex fluid mechanics, subsurface science, and soft materials.
+logo: /images/profile.png
+lang: en-US
 
-theme: jekyll-theme-minimal
+# Links shown in the page footer and under the photo on the home page
+links:
+  - name: Google Scholar
+    url: https://scholar.google.com/citations?hl=en&user=QiQqIuAAAAAJ&view_op=list_works&sortby=pubdate
+  - name: LinkedIn
+    url: https://www.linkedin.com/in/mohammad-reza-daneshvar-garmroodi-70224214b/
+  - name: GitHub
+    url: https://github.com/mrdanesh
+  - name: CV
+    url: /CV_MRDanesh.pdf
+
+# The site uses its own layouts in _layouts/ and stylesheet in assets/css/site.css.
+# Project cards and the Research menu are generated from _data/projects.yml.
+plugins:
+  - jekyll-seo-tag
+
+exclude:
+  - README.md
+  - LICENSE
+  - sample_page.md
+  - styles.css
+
 google_analytics: G-H71G6K48EG # your Google Analytics tracking ID here
-#github:
-#  is_project_page: false

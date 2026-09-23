@@ -4,69 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
 {% seo %}
-    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
-    <style>
-      section p,
-      section li {
-        text-align: justify;
-      }
-
-      /* Full name is long: keep it to two lines in the side panel */
-      header h1 {
-        font-size: 23px;
-        line-height: 1.25;
-      }
-
-      /* Simulation videos behave like the GIFs: fit the column, scale on phones */
-      section video {
-        display: block;
-        max-width: 100%;
-        height: auto;
-      }
-    </style>
-    <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <![endif]-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap">
+    <link rel="stylesheet" href="{{ "/assets/css/site.css" | relative_url }}">
   </head>
   <body>
-    <div class="wrapper">
-      <header>
-        <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
-        
-        {% if site.logo %}
-          <img src="{{site.logo | relative_url}}" alt="Logo" />
-        {% endif %}
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="{{ "/" | relative_url }}">{{ site.title }}</a>
+        <nav class="nav" aria-label="Main">
+          <a href="{{ "/" | relative_url }}"{% if page.url == "/" %} class="active"{% endif %}>Home</a>
+          <div class="dropdown">
+            <a href="{{ "/#research" | relative_url }}"{% if page.url contains "/research/" %} class="active"{% endif %} aria-haspopup="true">Research <span class="caret" aria-hidden="true">&#9662;</span></a>
+            <div class="dropdown-menu">
+              {% for p in site.data.projects %}<a href="{{ p.url | relative_url }}">{{ p.card }}</a>
+              {% endfor %}
+            </div>
+          </div>
+          <a href="{{ "/publications/" | relative_url }}"{% if page.url == "/publications/" %} class="active"{% endif %}>Publications</a>
+          <a href="{{ "/CV_MRDanesh.pdf" | relative_url }}" target="_blank" rel="noopener noreferrer">CV</a>
+        </nav>
+      </div>
+    </header>
 
-        <p>{{ site.description | default: site.github.project_tagline }}</p>
-
-        <!--
-        {% if site.github.is_project_page %}
-        <p class="view"><a href="{{ site.github.repository_url }}">View the Project on GitHub <small>{{ site.github.repository_nwo }}</small></a></p>
-        {% endif %}
-        
-
-        {% if site.github.is_user_page %}
-        <p class="view"><a href="{{ site.github.owner_url }}">View My GitHub Profile</a></p>
-        {% endif %}
-        -->
-
-        {% if site.show_downloads %}
-        <ul class="downloads">
-          <li><a href="{{ site.github.zip_url }}">Download <strong>ZIP File</strong></a></li>
-          <li><a href="{{ site.github.tar_url }}">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="{{ site.github.repository_url }}">View On <strong>GitHub</strong></a></li>
-        </ul>
-        {% endif %}
-      </header>
-      <section>
-
+    <main class="content">
       {{ content }}
+    </main>
 
-      </section>
-    </div>
-    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
+    <footer class="footer">
+      {% for l in site.links %}<a href="{{ l.url | relative_url }}" target="_blank" rel="noopener noreferrer">{{ l.name }}</a>{% unless forloop.last %}<span aria-hidden="true"> | </span>{% endunless %}{% endfor %}
+    </footer>
+
     {% if site.google_analytics %}
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
