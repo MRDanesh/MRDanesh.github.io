@@ -12,6 +12,19 @@
       section li {
         text-align: justify;
       }
+
+      /* Full name is long: keep it to two lines in the side panel */
+      header h1 {
+        font-size: 23px;
+        line-height: 1.25;
+      }
+
+      /* Simulation videos behave like the GIFs: fit the column, scale on phones */
+      section video {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
     </style>
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>

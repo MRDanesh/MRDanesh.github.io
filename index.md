@@ -11,18 +11,34 @@
 
 <div class="about-text">
   <p>
-    I am a fluid mechanician with a strong foundation in computational fluid dynamics and applied mathematics. I develop simplified model problems that capture the essential physics of real-world and industrial systems, with particular interest in <strong>non-Newtonian</strong>, <strong>multiphase</strong>, <strong>turbulent</strong>, and <strong>heat transfer</strong> phenomena.
+    My research combines curiosity-driven science with nature-inspired engineering, and it draws on <strong>complex fluid mechanics</strong>, <strong>subsurface science</strong>, and <strong>soft materials</strong>. I am a fluid mechanician by training, with a background in computational fluid dynamics and applied mathematics. I build simplified model problems that keep the essential physics of real-world and industrial systems, especially flows with non-Newtonian, multiphase, turbulent, or heat transfer effects.
   </p>
   <p>
-    I am also interested in <strong>data-driven methods</strong> and  <strong>reinforcement learning</strong>.
+    I am currently a postdoctoral researcher at McMaster University with Dr. Robin Zhao (<a href="https://www.robinzhao.com/" target="_blank" rel="noopener noreferrer">Zhao Lab</a>). There I model how radionuclides escape from TRISO nuclear fuel and move through the cracked graphite matrix around the fuel particles. I also work with data-driven methods and reinforcement learning.
   </p>
 </div>
 
 ---
 
+### Radionuclide Release from TRISO-Bearing Fuel Forms
+
+A TRISO fuel particle is a fuel kernel wrapped in a porous carbon buffer and three dense coatings: inner pyrolytic carbon, silicon carbide (SiC), and outer pyrolytic carbon. The SiC layer is the main barrier against metallic fission products. The particles sit inside a graphite or ceramic matrix, forming pebbles, compacts, or FCM fuel. When this fuel is stored or placed in a geological repository, the radioactivity that eventually escapes (the source term) does not come from one ideal particle. It comes from a large population of particles that differ in coating thickness, irradiation history, and degradation state, and that sit at different distances from cracks and from the outer surface of the fuel.
+
+Fuel-performance codes such as BISON and PARFUME describe in-reactor behaviour in detail, but access to them can be restricted, and they are not designed for transparent, long-time release calculations of degrading waste forms. In this project we are building an open, reduced-order model of radionuclide release that is cheap enough for uncertainty and sensitivity analysis and can later be coupled to repository-scale models. The work is split by scale. Mahyar Malekzade Kebria develops the particle model, where each particle is a set of concentric spherical layers and radionuclides move through them by diffusion, partitioning at layer boundaries, trapping, and decay. I develop the matrix model and the coupling between the two.
+
+In the matrix model, the graphite is a three-dimensional continuum with the particles cut out as voids. Cracks, and the thin gaps that open around particles that have debonded from the matrix, are two-dimensional surfaces embedded in the 3D domain, and the circle where a gap meets a crack is a one-dimensional line. I built this mixed-dimensional model on **[PorePy](https://github.com/pmgbergen/porepy)**. The matrix and the cracks use a multi-point flux approximation, and an algebraic flux-correction limiter keeps the concentration from going negative on these meshes. The two models are coupled in both directions. On every coupling interval the matrix passes each particle the concentration around it, the particle model returns the moles that crossed its outer surface, and those moles become sources in the matrix. Because the matrix concentration feeds back on the particle, a particle surrounded by matrix that already holds radionuclides releases more slowly. Both solvers book the same moles, and the balance between them is checked on every interval.
+
+So far I have run the coupled model on single-particle cases that add one ingredient at a time (an intact matrix, a crack passing near the particle, and a debonded particle cut by the crack) and on a synthetic compact slice with 400 particles and a tilted crack, in which every particle the crack cuts is debonded. Next come decay chains, sorption in the matrix, and particle properties sampled from a statistical library so that each particle in the compact is different.
+
+<br>
+<video src="images/TRISO/C5P400_flat_cut.mp4" width="500" autoplay loop muted playsinline></video>
+
+*Palladium concentration on a flat cut through the 400-particle compact. The black line is the crack and the orange rings are the gaps around debonded particles. The matrix starts loaded with palladium, which diffuses out through the outer surface of the compact.*
+
+---
+
 ### Rayleigh-Bénard convection control by reinforcement learning 
 
-I am interested in reinforcement learning and have studied foundational material including **[professor Chandar course](https://www.youtube.com/watch?v=J9JZyyPCJcQ&list=PLImtCgowF_ES_JdF_UcM60EXTcGZg67Ua)** and **[Richard Sutton book](http://incompleteideas.net/book/the-book-2nd.html)**.
 As a self-driven project, I developed a reinforcement learning framework to control Rayleigh–Bénard convection by dynamically adjusting the bottom wall temperature.
 The idea of this work comes from the **[Beintema et al](https://doi.org/10.1080/14685248.2020.1797059)** study. 
 To implement this, I coupled OpenFOAM with Python and applied the Proximal Policy Optimization (PPO) algorithm to learn control strategies for the flow.
