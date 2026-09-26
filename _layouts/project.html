@@ -1,0 +1,23 @@
+---
+layout: default
+---
+<article class="project">
+  <h1 class="page-title">{{ page.title }}</h1>
+
+  <div class="prose">
+    {{ content }}
+  </div>
+
+  {% assign projects = site.data.projects %}
+  {% for p in projects %}
+    {% if p.url == page.url %}
+      {% assign prev_index = forloop.index0 | minus: 1 %}
+      {% assign next_index = forloop.index0 | plus: 1 %}
+      <nav class="project-nav" aria-label="Other projects">
+        {% if prev_index >= 0 %}{% assign prev = projects[prev_index] %}<a class="prev" href="{{ prev.url | relative_url }}">&larr; {{ prev.card }}</a>{% else %}<span></span>{% endif %}
+        <a class="all" href="{{ "/#research" | relative_url }}">All projects</a>
+        {% if next_index < projects.size %}{% assign next = projects[next_index] %}<a class="next" href="{{ next.url | relative_url }}">{{ next.card }} &rarr;</a>{% else %}<span></span>{% endif %}
+      </nav>
+    {% endif %}
+  {% endfor %}
+</article>

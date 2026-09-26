@@ -1,0 +1,72 @@
+---
+layout: default
+---
+<section class="intro">
+  <div class="intro-text">
+    <h1 class="page-title">Mohammad Reza Daneshvar Garmroodi</h1>
+    <p>
+      I am a postdoctoral researcher at McMaster University, working with Dr. Robin Zhao in the
+      <a href="https://www.robinzhao.com/" target="_blank" rel="noopener noreferrer">Zhao Lab</a>.
+      I did my PhD at Concordia University under the supervision of
+      <a href="https://users.encs.concordia.ca/~idak/about-me/" target="_blank" rel="noopener noreferrer">Dr. Ida Karimfazli</a>,
+      where I studied mixing in yield-stress fluids.
+    </p>
+    <p>
+      My research combines curiosity-driven science with nature-inspired engineering, and it draws on
+      complex fluid mechanics, subsurface science, and soft materials. I am a fluid mechanician by training,
+      with a background in computational fluid dynamics and applied mathematics. I build simplified model
+      problems that keep the essential physics of real-world and industrial systems, especially flows with
+      non-Newtonian, multiphase, turbulent, or heat transfer effects. I also work with data-driven methods
+      and reinforcement learning.
+    </p>
+    <p>
+      At McMaster I work on radionuclide release from TRISO fuel particles, using a coupled particle–matrix
+      model built in PorePy. Before that, as a postdoctoral fellow at Concordia, I worked with SINTEF on
+      conditioning oil-based drilling fluids and on another project on melting in phase-change materials. You can read more about each project by clicking on the pictures below.
+    </p>
+  </div>
+  <div class="photo">
+    <img src="{{ "/images/profile.png" | relative_url }}" alt="Mohammad Reza Daneshvar Garmroodi">
+    <div class="photo-links">
+      {% for l in site.links %}<a href="{{ l.url | relative_url }}" target="_blank" rel="noopener noreferrer">{{ l.name }}</a>{% unless forloop.last %}<span aria-hidden="true"> | </span>{% endunless %}{% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="research">
+  <h2>Research</h2>
+  <div class="cards">
+    {% for p in site.data.projects %}
+    <a class="card" href="{{ p.url | relative_url }}">
+      <img src="{{ p.thumb | relative_url }}" alt="" loading="lazy" width="720" height="540">
+      <span>{{ p.card }}</span>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="bio">
+  <h2>Biography</h2>
+
+  <h3>Postdoctoral Researcher (2026 - present)</h3>
+  <p>McMaster University, Hamilton, Canada</p>
+  <p>Supervisor: Dr. Robin Zhao</p>
+
+  <h3>Postdoctoral Fellow (2025 - 2026)</h3>
+  <p>Concordia University, Montreal, Canada</p>
+  <p>In collaboration with SINTEF and Université de Lorraine</p>
+
+  <h3>PhD in Mechanical Engineering (2019 - 2025)</h3>
+  <p>Department of Mechanical, Industrial and Aerospace Engineering, Concordia University</p>
+  <p>Supervisor: Dr. Ida Karimfazli</p>
+  <p>Thesis title: <em>Mixing Dynamics in Yield Stress Fluids</em></p>
+
+  <h3>MASc in Mechanical Engineering (2017 - 2019)</h3>
+  <p>Amirkabir University of Technology, Tehran, Iran</p>
+  <p>Supervisor: Dr. Ali Ahmadpour</p>
+  <p>Thesis title: <em>Numerical Study of Two-Phase Yield Stress Fluids and Water in Different Flow Regimes</em></p>
+
+  <h3>BSc in Mechanical Engineering (2013 - 2017)</h3>
+  <p>University of Tabriz, Tabriz, Iran</p>
+  <p>Supervisor: Dr. Faramarz Talati</p>
+</section>
