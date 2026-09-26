@@ -1,0 +1,43 @@
+# One entry per project page. Order here = order of the cards on the home page,
+# the Research menu, and the previous/next links at the bottom of each project page.
+# card: short title under the picture. thumb: 4:3 picture in images/thumbs/.
+
+- card: Radionuclide release from TRISO fuel
+  url: /research/triso/
+  thumb: /images/thumbs/triso.jpg
+
+- card: Mixing in yield-stress fluids
+  url: /research/yield-stress-mixing/
+  thumb: /images/thumbs/yield-stress-mixing.jpg
+
+- card: Mixing in heterogeneous fluids
+  url: /research/heterogeneous-mixing/
+  thumb: /images/thumbs/heterogeneous-mixing.jpg
+
+- card: Jet collision and emulsion quality
+  url: /research/jet-emulsion/
+  thumb: /images/thumbs/jet-emulsion.jpg
+
+- card: Melting in phase-change materials
+  url: /research/pcm-melting/
+  thumb: /images/thumbs/pcm-melting.jpg
+
+- card: Viscoelastic hollow droplets
+  url: /research/hollow-droplets/
+  thumb: /images/thumbs/hollow-droplets.jpg
+
+- card: Waxy crude oil transport
+  url: /research/core-annular/
+  thumb: /images/thumbs/core-annular.jpg
+
+- card: Convection control by reinforcement learning
+  url: /research/rl-convection/
+  thumb: /images/thumbs/rl-convection.jpg
+
+- card: Sparse and physics-informed flow reconstruction
+  url: /research/sparse-pinns/
+  thumb: /images/thumbs/sparse-pinns.jpg
+
+- card: Reduced-order models for periodic flows
+  url: /research/pod-dmd/
+  thumb: /images/thumbs/pod-dmd.jpg
