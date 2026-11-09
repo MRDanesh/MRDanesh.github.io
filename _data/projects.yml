@@ -6,6 +6,10 @@
   url: /research/triso/
   thumb: /images/thumbs/triso.jpg
 
+- card: Contaminant removal in porous media
+  url: /research/porous-flow/
+  thumb: /images/thumbs/porous-flow.jpg
+
 - card: Mixing in yield-stress fluids
   url: /research/yield-stress-mixing/
   thumb: /images/thumbs/yield-stress-mixing.jpg

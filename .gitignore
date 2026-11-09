@@ -1,2 +1,5 @@
 # Private TRISO project documents (proposal, reports). Only the simulation video is published.
 images/TRISO/*.pdf
+# Private porous-flow project documents (plan, reports) and the original HEIC photo
+images/porous-flow/private/
+images/porous-flow/*.HEIC
