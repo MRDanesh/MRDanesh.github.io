@@ -16,4 +16,4 @@ By varying the polymer concentration and impact velocity, we built a regime map 
 
 ## Related publications
 
-- M.M. Nasiri, **M.R. Daneshvar Garmroodi**, D.C. Vadillo, and M. Tembely. **Experimental study of the impact of a hollow polymer droplet**. *Submitted to Physics of Fluids*.
+- M.M. Nasiri, **M.R. Daneshvar Garmroodi**, D.C. Vadillo, and M. Tembely (2026). **[Experimental study of the impact dynamics of polymeric hollow droplets](https://doi.org/10.1063/5.0334057)**. *Physics of Fluids*, 38(11), 113109.
