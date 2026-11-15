@@ -2,6 +2,11 @@
 layout: project
 title: Mixing in Heterogeneous Non-Newtonian Fluids
 permalink: /research/heterogeneous-mixing/
+glance:
+  problem: "Quantify how much mixing predictions change when an additive alters the fluid's density and rheology."
+  role: "First author; modelling, simulations, and analysis."
+  methods: "Advection–diffusion with concentration-dependent rheology and density, comparison of two model problems."
+  outcome: "Even small buoyancy changes the mixing rate markedly; published in the Journal of Non-Newtonian Fluid Mechanics (2024)."
 ---
 
 This study shows how far off mixing predictions can be when the heterogeneity of fluid properties is ignored. We look at the homogenization of an additive in a fluid-filled cylindrical tank stirred by an axisymmetric disk, where both the rheology and the density of the fluid depend on the additive concentration. We compare two models of how mixing develops. Model problem T includes the variation of the fluid properties with additive concentration, while model problem M replaces the fluid properties with their average values. In both, mixing is described by a concentration field governed by advection–diffusion.

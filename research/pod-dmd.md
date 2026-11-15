@@ -2,6 +2,12 @@
 layout: project
 title: "Interpretable Reduced-Order Model for Periodic Flows: POD Oscillators vs DMD"
 permalink: /research/pod-dmd/
+glance:
+  problem: "Predict periodic flows quickly with interpretable reduced-order models."
+  role: "Self-directed project."
+  methods: "POD with harmonic regression of the modal coefficients, rank-4 DMD."
+  outcome: "A clean baseline comparison on the cylinder wake."
+code: https://github.com/MRDanesh/POD_DMD
 ---
 
 This project compares two classic reduced-order modelling approaches for predicting the 2D cylinder wake flow field from simulation snapshots.

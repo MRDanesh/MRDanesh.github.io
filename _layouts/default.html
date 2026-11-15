@@ -15,10 +15,16 @@
     <div class="home-wrap">
       <header class="home-header">
         <div class="id-row">
-          <a class="home-name" href="{{ "/" | relative_url }}">Reza Daneshvar</a>
+          <div class="id-text">
+            <a class="home-name" href="{{ "/" | relative_url }}">Reza Daneshvar</a>
+            <p class="role">CFD &middot; Scientific machine learning &middot; Thermofluids</p>
+            <p class="fullname">Mohammad Reza Daneshvar Garmroodi, Research Scientist at McMaster University</p>
+            <a class="cv-button" href="{{ "/CV_MRDanesh.pdf" | relative_url }}" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-download"></i> Download CV</a>
+          </div>
           <div class="me">
             <img src="{{ "/images/profile.png" | relative_url }}" alt="Reza Daneshvar">
             <div class="icons">
+              <a href="mailto:danesm2@mcmaster.ca" aria-label="Email" title="danesm2@mcmaster.ca"><i class="fa-solid fa-envelope"></i></a>
               <a href="https://www.linkedin.com/in/mohammad-reza-daneshvar-garmroodi-70224214b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
               <a href="https://scholar.google.com/citations?hl=en&user=QiQqIuAAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar" title="Google Scholar"><i class="fa-brands fa-google-scholar"></i></a>
               <a href="https://github.com/mrdanesh" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub"><i class="fa-brands fa-github"></i></a>
@@ -29,6 +35,8 @@
         <nav class="home-nav" aria-label="Main">
           <a href="{{ "/" | relative_url }}"{% if page.url == "/" %} class="active"{% endif %}>Home</a>
           <a href="{{ "/#research" | relative_url }}"{% if page.url contains "/research/" %} class="active"{% endif %}>Research</a>
+          <a href="{{ "/#skills" | relative_url }}">Skills</a>
+          <a href="{{ "/#experience" | relative_url }}">Experience</a>
           <a href="{{ "/publications/" | relative_url }}"{% if page.url == "/publications/" %} class="active"{% endif %}>Publications</a>
           <a href="{{ "/CV_MRDanesh.pdf" | relative_url }}" target="_blank" rel="noopener noreferrer">CV</a>
         </nav>

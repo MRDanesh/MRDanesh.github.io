@@ -1,20 +1,36 @@
 ---
 layout: default
 ---
+<section class="about">
+  <h1>About</h1>
+  <p>
+    I am a CFD and scientific machine learning engineer working on thermofluids and complex flows. I build and
+    validate solvers in OpenFOAM and Julia, develop data-driven surrogates and controllers, and turn simulation
+    results into design and operating recommendations for industrial partners. I am currently a Research Scientist
+    at McMaster University
+    (<a href="https://www.robinzhao.com/" target="_blank" rel="noopener noreferrer">Zhao Lab</a>).
+  </p>
+
+  <h2>Key results</h2>
+  <ul class="results">
+    <li>Built CFD models of a dual-shear-gun fluid-conditioning system for SINTEF and Jagtech (Norway). The
+      partners' experiments confirmed the predictions, and the work led to two OMAE 2026 papers.
+      <a href="{{ "/research/jet-emulsion/" | relative_url }}">Project</a></li>
+    <li>Trained a reinforcement-learning controller, coupled to OpenFOAM, that halves the heat transfer of
+      Rayleigh–Bénard convection by changing only the heater pattern.
+      <a href="{{ "/research/rl-convection/" | relative_url }}">Project</a></li>
+    <li>Developing a GPU-accelerated Julia (CUDA) solver, a Fourier-neural-operator surrogate, and model
+      predictive control for contaminant removal in porous media, validated against flow-cell experiments.
+      <a href="{{ "/research/porous-flow/" | relative_url }}">Project</a></li>
+    <li>Developed and validated OpenFOAM solvers for viscoplastic turbulent flow and conjugate melting, released
+      on <a href="https://github.com/mrdanesh" target="_blank" rel="noopener noreferrer">GitHub</a>.</li>
+    <li>First-author papers in the <em>Journal of Fluid Mechanics</em> and the <em>Journal of Non-Newtonian
+      Fluid Mechanics</em>. <a href="{{ "/publications/" | relative_url }}">Publications</a></li>
+  </ul>
+</section>
+
 <section id="research">
-  <h1>Research</h1>
-  <p>
-    I study complex fluids and flows in porous media with simulations, experiments, and scientific machine
-    learning. I build simplified model problems that keep the essential physics of industrial and environmental
-    systems, from mixing in yield-stress fluids to contaminant removal underground and radionuclide release from
-    nuclear fuel.
-  </p>
-  <p>
-    I am a Research Scientist at McMaster University in the
-    <a href="https://www.robinzhao.com/" target="_blank" rel="noopener noreferrer">Zhao Lab</a>, with Dr. Robin Zhao.
-    I did my PhD at Concordia University with
-    <a href="https://users.encs.concordia.ca/~idak/about-me/" target="_blank" rel="noopener noreferrer">Dr. Ida Karimfazli</a>.
-  </p>
+  <h2>Research areas</h2>
 
   <div class="areas-4">
     {% for t in site.data.topics %}
@@ -25,6 +41,70 @@ layout: default
       </a>
     </div>
     {% endfor %}
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills">
+    <div>
+      <h3>CFD and numerics</h3>
+      <p>OpenFOAM (C++ solver and model development), Julia (CUDA), PorePy, MOOSE, Basilisk, Ansys Fluent, COMSOL;
+        finite-volume methods, RANS turbulence modelling, multiphase (VOF), conjugate heat transfer, verification and
+        validation</p>
+    </div>
+    <div>
+      <h3>Scientific machine learning</h3>
+      <p>Python, PyTorch, NumPy; Fourier neural operators, physics-informed neural networks, reinforcement learning
+        (PPO), model predictive control, POD and DMD, sparse sensing, Kalman filtering, uncertainty and sensitivity
+        analysis</p>
+    </div>
+    <div>
+      <h3>Thermofluids</h3>
+      <p>Convection and phase change, non-Newtonian and viscoplastic flows, turbulent and multiphase flows, mixing,
+        flow and transport in porous media</p>
+    </div>
+    <div>
+      <h3>Experiments and tools</h3>
+      <p>Flow-cell experiments, flow visualization, PIV, rheometry; Git, Bash, parallel simulation workflows</p>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+  <div class="timeline">
+    <div class="tl-item">
+      <p class="tl-date">Jun 2026 &ndash; present</p>
+      <div>
+        <h3>Research Scientist, McMaster University</h3>
+        <p>Subsurface flow and scientific ML: GPU solver in Julia, neural-operator surrogate and model predictive
+          control, bench-scale experiments. Nuclear fuel and repository modelling in PorePy and MOOSE.</p>
+      </div>
+    </div>
+    <div class="tl-item">
+      <p class="tl-date">Aug 2025 &ndash; Jun 2026</p>
+      <div>
+        <h3>Industrial Research Engineer, Concordia University</h3>
+        <p>Industrial R&amp;D in thermal-fluids and CFD, including a Mitacs-funded project with SINTEF and Jagtech
+          (Norway). CFD models confirmed by partner experiments, a RANS model for viscoplastic flow, and a melting
+          solver for electronics thermal management.</p>
+      </div>
+    </div>
+    <div class="tl-item">
+      <p class="tl-date">2019 &ndash; 2025</p>
+      <div>
+        <h3>PhD in Mechanical Engineering, Concordia University</h3>
+        <p>Mixing dynamics in yield-stress fluids, with Dr. Ida Karimfazli.</p>
+      </div>
+    </div>
+    <div class="tl-item">
+      <p class="tl-date">2013 &ndash; 2019</p>
+      <div>
+        <h3>MASc, Amirkabir University of Technology; BSc, University of Tabriz</h3>
+        <p>Mechanical engineering; two-phase flows of yield-stress fluids and water, and mixed convection.</p>
+      </div>
+    </div>
   </div>
 </section>
 

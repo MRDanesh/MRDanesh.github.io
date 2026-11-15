@@ -4,6 +4,18 @@ layout: default
 <article class="project">
   <h1 class="page-title">{{ page.title }}</h1>
 
+  {% if page.glance %}
+  <aside class="glance" aria-label="Project at a glance">
+    <dl>
+      {% if page.glance.problem %}<dt>Problem</dt><dd>{{ page.glance.problem }}</dd>{% endif %}
+      {% if page.glance.role %}<dt>My role</dt><dd>{{ page.glance.role }}</dd>{% endif %}
+      {% if page.glance.methods %}<dt>Methods</dt><dd>{{ page.glance.methods }}</dd>{% endif %}
+      {% if page.glance.outcome %}<dt>Outcome</dt><dd>{{ page.glance.outcome }}</dd>{% endif %}
+    </dl>
+    {% if page.code %}<a class="code-button" href="{{ page.code }}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> View code</a>{% endif %}
+  </aside>
+  {% endif %}
+
   <div class="prose">
     {{ content }}
   </div>

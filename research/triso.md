@@ -2,6 +2,11 @@
 layout: project
 title: Radionuclide Release from TRISO Fuel Particles
 permalink: /research/triso/
+glance:
+  problem: "Predict how radionuclides are released from TRISO nuclear fuel for storage and disposal assessments."
+  role: "Matrix-scale model and the coupling between the particle and matrix models."
+  methods: "PorePy, coupled particle–matrix model, mixed-dimensional transport."
+  outcome: "Ongoing research at McMaster University."
 ---
 
 *Ongoing research at McMaster University.*

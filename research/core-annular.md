@@ -2,6 +2,11 @@
 layout: project
 title: Transporting Waxy Crude Oil and Water in Core-Annular and Stratified Regimes
 permalink: /research/core-annular/
+glance:
+  problem: "Transport waxy crude oil through pipelines with a lower pressure drop."
+  role: "First author; simulations and analysis."
+  methods: "3D volume-of-fluid multiphase simulations with RANS turbulence, viscoplastic oil core."
+  outcome: "Effects of wax content, velocity, expansion and inclination on pressure drop; two journal papers (2020)."
 ---
 
 In this work, we performed a 3D numerical study of core-annular and stratified flows of waxy crude oil and water in inclined pipes with a gradual expansion. Waxy crudes are highly viscous crude oils with non-Newtonian flow behaviour, and transporting them efficiently is still a technical challenge. We examined core-annular and stratified transport of waxy crude in detail. The oil core flows in the laminar regime, while the water flow is turbulent. A volume-of-fluid model captures the oil/water interface, and a RANS turbulence model predicts the turbulent water flow. In the core-annular regime in an inclined pipe, the oil is treated as a viscoplastic fluid.

@@ -2,6 +2,12 @@
 layout: project
 title: Rayleigh-Bénard Convection Control by Reinforcement Learning
 permalink: /research/rl-convection/
+glance:
+  problem: "Reduce the heat transfer of Rayleigh–Bénard convection by changing only the heater pattern."
+  role: "Self-directed project; solver, RL framework, and training."
+  methods: "Custom OpenFOAM 9 solver, Python and PyTorch, PPO with 64 parallel simulations."
+  outcome: "About 50% lower Nusselt number at both Rayleigh numbers tested."
+code: https://github.com/MRDanesh/pyOpenFoam
 ---
 
 In Rayleigh–Bénard convection a fluid layer is heated from below and cooled from above. Above a critical Rayleigh number, warm fluid rises and cold fluid sinks in convection rolls, which carry far more heat than conduction alone. Following **[Beintema et al.](https://doi.org/10.1080/14685248.2020.1797059)**, I asked whether a reinforcement-learning agent that only rearranges the temperature along the heated plate, while keeping its mean temperature fixed, can weaken this convection.

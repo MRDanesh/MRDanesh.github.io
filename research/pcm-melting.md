@@ -2,6 +2,12 @@
 layout: project
 title: Buoyancy-Driven Melting in Phase-Change Materials With Embedded Heat Spreaders
 permalink: /research/pcm-melting/
+glance:
+  problem: "Phase-change materials melt unevenly and waste latent heat in thermal management."
+  role: "Solver development and the conductor design study."
+  methods: "Enthalpy-based conjugate heat-transfer and melting solver in OpenFOAM."
+  outcome: "Design insights for conductor layouts that lower the hot-side temperature; paper in preparation."
+code: https://github.com/MRDanesh/conjugateMeltingFOAM
 ---
 
 Phase-change materials (PCMs) are used for thermal management in photovoltaic panels and electronic cooling devices, but they are often used inefficiently. The problem comes from the lack of natural convection in the melted PCM. In this work, done in collaboration with Université de Lorraine, we built a simplified benchmark model to study how embedded high-conductivity inserts can improve heat transport in PCMs.

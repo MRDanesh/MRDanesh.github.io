@@ -2,6 +2,12 @@
 layout: project
 title: Mixing Localization in Yield-Stress Fluids
 permalink: /research/yield-stress-mixing/
+glance:
+  problem: "Understand why mixing stays localized in yield-stress fluids such as pastes and muds, and when it spreads."
+  role: "First author; simulations, analysis, and solver development."
+  methods: "OpenFOAM with a dynamic mesh (extended twoLiquidMixingFoam), spectral analysis of energy oscillations."
+  outcome: "Three mixing regimes and their transitions, published in the Journal of Fluid Mechanics (2025)."
+code: https://github.com/MRDanesh/twoLiquidMixingDyMFoamVol
 ---
 
 The goal of this study is to identify the mechanisms behind the different mixing regimes, and the localization of mixing, in yield-stress fluids. We studied the stirring of an infinite, two-dimensional domain filled with a Bingham fluid. A cylindrical stirrer moves along a circular path at constant speed. The domain starts at rest, and a passive dye marks its lower half, so we can follow how the dye interface evolves and how mixing develops.

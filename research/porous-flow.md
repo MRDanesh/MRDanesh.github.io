@@ -2,6 +2,11 @@
 layout: project
 title: Learning and Controlling Contaminant Removal in Heterogeneous Porous Media
 permalink: /research/porous-flow/
+glance:
+  problem: "Flush a contaminant out of heterogeneous porous media with as little water as possible, when the permeability is unknown."
+  role: "Simulations, bench-scale experiments, and the data-driven control framework."
+  methods: "GPU-accelerated Julia (CUDA) solver, OpenFOAM, Fourier neural operator surrogate, permeability inference from sparse sensors, model predictive control."
+  outcome: "Ongoing research; simulations validated against flow-cell experiments."
 ---
 
 *Ongoing research at McMaster University.*

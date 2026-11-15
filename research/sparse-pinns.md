@@ -2,6 +2,12 @@
 layout: project
 title: Sparse and Physics-Informed Reconstruction of Fluid Flows
 permalink: /research/sparse-pinns/
+glance:
+  problem: "Reconstruct a full flow field from a few sensors."
+  role: "Self-directed project."
+  methods: "Sparse snapshot regression (LASSO), physics-informed neural network enforcing Navier–Stokes."
+  outcome: "Comparison of fast data-driven interpolation with physics-informed learning on a cylinder wake."
+code: https://github.com/MRDanesh/Sparse_PINNs
 ---
 
 This project compares two very different ways of reconstructing a full fluid flow field from sparse sensor measurements, using the classic dataset of a 2D incompressible cylinder wake. The goal is to recover the complete velocity and pressure fields from a limited number of spatial sensors. I implemented and compared a sparse snapshot-based method rooted in compressed sensing and a physics-informed neural network (PINN) that enforces the Navier–Stokes equations during training.

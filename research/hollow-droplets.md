@@ -2,6 +2,11 @@
 layout: project
 title: Viscoelastic Hollow Droplets
 permalink: /research/hollow-droplets/
+glance:
+  problem: "Understand how polymer additives change the impact of hollow droplets, relevant to coating and spraying."
+  role: "Co-first author."
+  methods: "High-speed imaging experiments, regime mapping in the Weber–Deborah plane."
+  outcome: "Published in Physics of Fluids (2026)."
 ---
 
 Hollow droplets matter in applications such as coating and spraying, but their impact has been studied far less than that of dense droplets, especially for non-Newtonian fluids. This experimental work, with M.M. Nasiri, looks at the impact of hollow Newtonian (water) and viscoelastic (polymer solution) droplets on a solid surface.

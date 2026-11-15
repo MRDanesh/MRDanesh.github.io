@@ -55,7 +55,7 @@
 - card: Convection control by reinforcement learning
   url: /research/rl-convection/
   venue: Self-directed project
-  thumb: /images/thumbs/rl-convection.jpg
+  thumb: /images/thumbs/rl-convection-controlled.jpg
   summary: A reinforcement-learning controller (PPO) that changes the bottom-wall temperature to control Rayleigh–Bénard convection, coupling OpenFOAM with Python.
 
 - card: Sparse and physics-informed flow reconstruction

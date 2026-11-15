@@ -2,6 +2,12 @@
 layout: project
 title: "From Jet Collision to Emulsion Quality: Nozzle Dynamics and Recirculation"
 permalink: /research/jet-emulsion/
+glance:
+  problem: "Predict how well a dual-shear-gun device conditions oil-based drilling fluids, for SINTEF and Jagtech."
+  role: "CFD models of the nozzle and mixing chamber, turbulence-model development, and recommendations to the partners."
+  methods: "OpenFOAM (C++), RANS eddy-viscosity model for viscoplastic flow validated against DNS, Herschel–Bulkley rheology."
+  outcome: "Predictions confirmed by the partners' experiments; an iterative operating strategy; two OMAE 2026 papers."
+code: https://github.com/MRDanesh/non-Newtonian-RANS
 ---
 
 Oil-based drilling fluids have to be conditioned during offshore drilling so that their rheology and dispersion stay stable. The **[Dual Shear Gun](https://jagtech.no/dual-shear-gun/)** has been proposed as a compact, high-throughput device for fast conditioning: the fluid is sheared hard in a nozzle and then mixed by jets downstream. Experiments look promising, but there is still no predictive framework that links the operating conditions to how much the emulsion is refined inside the device.
