@@ -7,35 +7,55 @@
 {% seo %}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Rubik:ital,wght@0,400;0,500;0,700;1,400&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="{{ "/assets/css/site.css" | relative_url }}">
   </head>
-  <body>
-    <header class="topbar">
-      <div class="topbar-inner">
-        <a class="brand" href="{{ "/" | relative_url }}">{{ site.title }}</a>
-        <nav class="nav" aria-label="Main">
-          <a href="{{ "/" | relative_url }}"{% if page.url == "/" %} class="active"{% endif %}>Home</a>
-          <div class="dropdown">
-            <a href="{{ "/#research" | relative_url }}"{% if page.url contains "/research/" %} class="active"{% endif %} aria-haspopup="true">Research <span class="caret" aria-hidden="true">&#9662;</span></a>
-            <div class="dropdown-menu">
-              {% for p in site.data.projects %}<a href="{{ p.url | relative_url }}">{{ p.card }}</a>
-              {% endfor %}
+  <body class="home-page">
+    <div class="home-wrap">
+      <header class="home-header">
+        <div class="id-row">
+          <a class="home-name" href="{{ "/" | relative_url }}">Reza Daneshvar</a>
+          <div class="me">
+            <img src="{{ "/images/profile.png" | relative_url }}" alt="Reza Daneshvar">
+            <div class="icons">
+              <a href="https://www.linkedin.com/in/mohammad-reza-daneshvar-garmroodi-70224214b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="https://scholar.google.com/citations?hl=en&user=QiQqIuAAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar" title="Google Scholar"><i class="fa-brands fa-google-scholar"></i></a>
+              <a href="https://github.com/mrdanesh" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub"><i class="fa-brands fa-github"></i></a>
             </div>
           </div>
+        </div>
+
+        <nav class="home-nav" aria-label="Main">
+          <a href="{{ "/" | relative_url }}"{% if page.url == "/" %} class="active"{% endif %}>Home</a>
+          <a href="{{ "/#research" | relative_url }}"{% if page.url contains "/research/" %} class="active"{% endif %}>Research</a>
           <a href="{{ "/publications/" | relative_url }}"{% if page.url == "/publications/" %} class="active"{% endif %}>Publications</a>
           <a href="{{ "/CV_MRDanesh.pdf" | relative_url }}" target="_blank" rel="noopener noreferrer">CV</a>
         </nav>
-      </div>
-    </header>
+      </header>
 
-    <main class="content">
-      {{ content }}
-    </main>
+      <main>
+        {{ content }}
+      </main>
+    </div>
 
-    <footer class="footer">
-      {% for l in site.links %}<a href="{{ l.url | relative_url }}" target="_blank" rel="noopener noreferrer">{{ l.name }}</a>{% unless forloop.last %}<span aria-hidden="true"> | </span>{% endunless %}{% endfor %}
-    </footer>
+    <script>
+      // Load and play each video only while it is on screen.
+      (function () {
+        var videos = document.querySelectorAll('video[data-src]');
+        function start(v) {
+          if (!v.src) { v.src = v.dataset.src; }
+          var p = v.play(); if (p && p.catch) { p.catch(function () {}); }
+        }
+        if (!('IntersectionObserver' in window)) { videos.forEach(start); return; }
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) { start(e.target); } else if (e.target.src) { e.target.pause(); }
+          });
+        }, { rootMargin: '200px 0px' });
+        videos.forEach(function (v) { io.observe(v); });
+      })();
+    </script>
 
     {% if site.google_analytics %}
     <script>

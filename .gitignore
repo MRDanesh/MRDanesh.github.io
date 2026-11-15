@@ -3,3 +3,7 @@ images/TRISO/*.pdf
 # Private porous-flow project documents (plan, reports) and the original HEIC photo
 images/porous-flow/private/
 images/porous-flow/*.HEIC
+# Local working folders: raw RL videos, CV LaTeX build, Jekyll output
+RL-portfolio/
+CV/
+_site/

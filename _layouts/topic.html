@@ -1,0 +1,25 @@
+---
+layout: default
+---
+{% assign topic = site.data.topics | where: "slug", page.topic | first %}
+<article class="topic">
+  <h1>{{ topic.page_title }}</h1>
+  <p class="dropcap">{{ topic.intro }}</p>
+
+  {% for url in topic.projects %}
+    {% assign p = site.data.projects | where: "url", url | first %}
+    <section class="topic-item">
+      <a class="topic-media" href="{{ p.url | relative_url }}">
+        <img src="{{ p.thumb | relative_url }}" alt="" loading="lazy">
+      </a>
+      <div class="topic-text">
+        <a class="topic-item-title" href="{{ p.url | relative_url }}">{{ p.card }}</a>
+        <p class="venue">{{ p.venue }}</p>
+        <p>{{ p.summary }}</p>
+        <a class="more" href="{{ p.url | relative_url }}">Read more &rarr;</a>
+      </div>
+    </section>
+  {% endfor %}
+
+  <p class="back"><a href="{{ "/#research" | relative_url }}">&larr; All research topics</a></p>
+</article>

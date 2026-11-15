@@ -1,84 +1,61 @@
 ---
 layout: default
 ---
-<section class="intro">
-  <div class="intro-text">
-    <h1 class="page-title">Mohammad Reza Daneshvar Garmroodi</h1>
-    <p>
-      I am a Research Scientist at McMaster University, working with Dr. Robin Zhao in the
-      <a href="https://www.robinzhao.com/" target="_blank" rel="noopener noreferrer">Zhao Lab</a>.
-      I did my PhD at Concordia University under the supervision of
-      <a href="https://users.encs.concordia.ca/~idak/about-me/" target="_blank" rel="noopener noreferrer">Dr. Ida Karimfazli</a>,
-      where I studied mixing in yield-stress fluids.
-    </p>
-    <p>
-      My research combines curiosity-driven science with nature-inspired engineering, and it draws on
-      complex fluid mechanics, subsurface science, and soft materials. I am a fluid mechanician by training,
-      with a background in computational fluid dynamics and applied mathematics. I build simplified model
-      problems that keep the essential physics of real-world and industrial systems, especially flows with
-      non-Newtonian, multiphase, turbulent, or heat transfer effects. I also work with data-driven methods
-      and reinforcement learning.
-    </p>
-    <p>
-      At McMaster I work on two topics. The first is subsurface flow and scientific machine learning. I built
-      a GPU-accelerated solver in Julia for flow and contaminant transport in heterogeneous porous media, and a
-      data-driven control framework that combines a Fourier neural operator surrogate, inference of the hidden
-      permeability field from sparse sensor data, and model predictive control. A reinforcement-learning
-      controller is in development, and I compare the simulations with bench-scale experiments in a
-      transparent flow cell. The second is nuclear fuel and repository modelling: a coupled particle–matrix
-      solver in PorePy for radionuclide release from TRISO nuclear fuel, and a coupled
-      thermal-hydraulic-mechanical-chemical (THMC) repository model for SMR fuels in MOOSE.
-    </p>
-    <p>
-      Before that, I was an Industrial Research Engineer at Concordia, working on industrial R&amp;D in
-      thermal-fluids and CFD. This included a Mitacs-funded project with SINTEF and Jagtech (Norway) on a
-      dual-shear-gun fluid-conditioning system, and a melting solver for heat-spreader designs in electronics
-      thermal management. You can read more about each project by clicking on the pictures below.
-    </p>
-  </div>
-  <div class="photo">
-    <img src="{{ "/images/profile.png" | relative_url }}" alt="Mohammad Reza Daneshvar Garmroodi">
-    <div class="photo-links">
-      {% for l in site.links %}<a href="{{ l.url | relative_url }}" target="_blank" rel="noopener noreferrer">{{ l.name }}</a>{% unless forloop.last %}<span aria-hidden="true"> | </span>{% endunless %}{% endfor %}
-    </div>
-  </div>
-</section>
-
 <section id="research">
-  <h2>Research</h2>
-  <div class="cards">
-    {% for p in site.data.projects %}
-    <a class="card" href="{{ p.url | relative_url }}">
-      <img src="{{ p.thumb | relative_url }}" alt="" loading="lazy" width="720" height="540">
-      <span>{{ p.card }}</span>
-    </a>
+  <h1>Research</h1>
+  <p>
+    I study complex fluids and flows in porous media with simulations, experiments, and scientific machine
+    learning. I build simplified model problems that keep the essential physics of industrial and environmental
+    systems, from mixing in yield-stress fluids to contaminant removal underground and radionuclide release from
+    nuclear fuel.
+  </p>
+  <p>
+    I am a Research Scientist at McMaster University in the
+    <a href="https://www.robinzhao.com/" target="_blank" rel="noopener noreferrer">Zhao Lab</a>, with Dr. Robin Zhao.
+    I did my PhD at Concordia University with
+    <a href="https://users.encs.concordia.ca/~idak/about-me/" target="_blank" rel="noopener noreferrer">Dr. Ida Karimfazli</a>.
+  </p>
+
+  <div class="areas-4">
+    {% for t in site.data.topics %}
+    <div class="area">
+      <a class="area-title" href="{{ t.url | relative_url }}">{{ t.title }}</a>
+      <a class="area-snap" href="{{ t.url | relative_url }}">
+        <img src="{{ t.snap | relative_url }}" alt="{{ t.snap_alt }}" loading="lazy">
+      </a>
+    </div>
     {% endfor %}
   </div>
 </section>
 
-<section class="bio">
-  <h2>Biography</h2>
+<section class="highlights">
+  <h2>Recent paper highlights</h2>
+  <div class="highlight-grid">
+    <article>
+      <a class="hl-title" href="https://doi.org/10.1017/jfm.2025.10729" target="_blank" rel="noopener noreferrer">Yield-Stress Fluid Mixing: Localisation Mechanisms and Regime Transitions</a>
+      <video data-src="{{ "/images/home/jfm-highlight.mp4" | relative_url }}" muted loop playsinline preload="none"></video>
+      <p>
+        See our paper in the <em>Journal of Fluid Mechanics</em> on how a yield stress confines mixing around a
+        moving stirrer. As the yield stress grows (left to right), shed vortices first escape, then stay trapped
+        near the stirrer, and finally stop forming. <a href="{{ "/research/yield-stress-mixing/" | relative_url }}">More</a>
+      </p>
+    </article>
+    <article>
+      <a class="hl-title" href="https://doi.org/10.1063/5.0334057" target="_blank" rel="noopener noreferrer">Impact Dynamics of Polymeric Hollow Droplets</a>
+      <video data-src="{{ "/images/home/hollow-droplets.mp4" | relative_url }}" muted loop playsinline preload="none"></video>
+      <p>
+        See our paper in <em>Physics of Fluids</em> on hollow water and polymer droplets hitting a surface.
+        Adding polymer weakens the central counter-jet, delays bubble rupture, and keeps the droplet from
+        detaching. <a href="{{ "/research/hollow-droplets/" | relative_url }}">More</a>
+      </p>
+    </article>
+  </div>
+</section>
 
-  <h3>Research Scientist (2026 - present)</h3>
-  <p>McMaster University, Hamilton, Canada</p>
-  <p>Zhao Lab, with Dr. Robin Zhao</p>
-  <p>Subsurface flow and scientific machine learning; nuclear fuel and repository modelling</p>
-
-  <h3>Industrial Research Engineer (2025 - 2026)</h3>
-  <p>Concordia University, Montreal, Canada</p>
-  <p>Industrial R&amp;D in thermal-fluids and CFD, including a Mitacs-funded project with SINTEF and Jagtech (Norway)</p>
-
-  <h3>PhD in Mechanical Engineering (2019 - 2025)</h3>
-  <p>Department of Mechanical, Industrial and Aerospace Engineering, Concordia University</p>
-  <p>Supervisor: Dr. Ida Karimfazli</p>
-  <p>Thesis title: <em>Mixing Dynamics in Yield Stress Fluids</em></p>
-
-  <h3>MASc in Mechanical Engineering (2017 - 2019)</h3>
-  <p>Amirkabir University of Technology, Tehran, Iran</p>
-  <p>Supervisor: Dr. Ali Ahmadpour</p>
-  <p>Thesis title: <em>Numerical Study of Two-Phase Yield Stress Fluids and Water in Different Flow Regimes</em></p>
-
-  <h3>BSc in Mechanical Engineering (2013 - 2017)</h3>
-  <p>University of Tabriz, Tabriz, Iran</p>
-  <p>Supervisor: Dr. Faramarz Talati</p>
+<section class="all-projects">
+  <h2>All projects</h2>
+  <ul>
+    {% for p in site.data.projects %}<li><a href="{{ p.url | relative_url }}">{{ p.card }}</a></li>
+    {% endfor %}
+  </ul>
 </section>

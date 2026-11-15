@@ -1,0 +1,66 @@
+# Research topics shown as columns on the home page. Each has its own page
+# (research/<slug>.md) with a short summary and the list of its projects.
+# projects: urls of entries in _data/projects.yml, in display order.
+
+- slug: data-driven
+  title: Data driven
+  page_title: Data-driven modelling and control of flows
+  url: /research/data-driven/
+  snap: /images/home/snap-data-driven.jpg
+  snap_alt: OpenFOAM concentration field next to the Fourier neural operator prediction
+  intro: >-
+    Full simulations are often too slow to run inside a control loop, and in practice we only see a flow
+    through a few sensors. I use scientific machine learning and reduced-order models to predict and
+    control flows under these limits, from neural-operator surrogates and online inference of hidden
+    properties to sparse reconstruction, physics-informed neural networks, modal decompositions, and
+    reinforcement learning.
+  projects:
+    - /research/porous-flow/
+    - /research/rl-convection/
+    - /research/sparse-pinns/
+    - /research/pod-dmd/
+
+- slug: mixing
+  title: Mixing
+  page_title: Mixing of complex fluids
+  url: /research/mixing/
+  snap: /images/home/snap-mixing.jpg
+  snap_alt: Concentration field in a jet mixing chamber
+  intro: >-
+    Many industrial fluids, such as pastes, drilling muds, and polymer solutions, do not flow like water,
+    and their properties change as they mix. I study how a yield stress, contrasts in density and
+    viscosity, and colliding jets control where and how fast fluids mix, using simplified model problems
+    that keep the essential physics.
+  projects:
+    - /research/yield-stress-mixing/
+    - /research/heterogeneous-mixing/
+    - /research/jet-emulsion/
+
+- slug: heat-transfer
+  title: Heat transfer
+  page_title: Heat transfer and its control
+  url: /research/heat-transfer/
+  snap: /images/home/snap-heat-transfer.jpg
+  snap_alt: Uncontrolled and reinforcement-learning-controlled Rayleigh-Benard convection
+  intro: >-
+    How much heat a system carries often depends on flows that are hard to control, from convection
+    rolls to moving melting fronts. I use simulations and reinforcement learning to understand and steer
+    these flows, for example by changing the temperature pattern of a heater or by embedding
+    high-conductivity material in a phase-change material.
+  projects:
+    - /research/rl-convection/
+    - /research/pcm-melting/
+
+- slug: porous-media
+  title: Porous media
+  page_title: Flow and transport in porous media
+  url: /research/porous-media/
+  snap: /images/home/snap-porous-media.jpg
+  snap_alt: Contaminant plume in a flow-cell experiment next to the matching OpenFOAM simulation
+  intro: >-
+    Flow through porous materials controls how contaminants are flushed out of the ground and how
+    radionuclides could escape from nuclear fuel. I combine flow-cell experiments, simulations, and
+    coupled multi-scale models to understand and control transport through heterogeneous porous media.
+  projects:
+    - /research/porous-flow/
+    - /research/triso/

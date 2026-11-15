@@ -1,47 +1,71 @@
-# One entry per project page. Order here = order of the cards on the home page,
-# the Research menu, and the previous/next links at the bottom of each project page.
-# card: short title under the picture. thumb: 4:3 picture in images/thumbs/.
+# One entry per project page. Order here = order of the "All projects" list on the
+# home page and of the previous/next links at the bottom of each project page.
+# card: short title. venue: italic line on topic pages. summary: one or two sentences
+# shown on the topic pages (see _data/topics.yml for which projects each topic lists).
+# thumb: 4:3 picture (images/thumbs/), shown on the topic pages.
 
 - card: Radionuclide release from TRISO fuel
   url: /research/triso/
+  venue: Ongoing research, McMaster University
   thumb: /images/thumbs/triso.jpg
+  summary: Ongoing work on how radionuclides are released from TRISO fuel particles and move through the surrounding fuel matrix, using a coupled particle–matrix model built in PorePy.
 
 - card: Contaminant removal in porous media
   url: /research/porous-flow/
+  venue: Ongoing research, McMaster University
   thumb: /images/thumbs/porous-flow.jpg
+  summary: Ongoing work on flushing a contaminant out of heterogeneous porous media, combining flow-cell experiments, simulations, a neural-operator surrogate, and model predictive control.
 
 - card: Mixing in yield-stress fluids
   url: /research/yield-stress-mixing/
+  venue: Journal of Fluid Mechanics, 2025
   thumb: /images/thumbs/yield-stress-mixing.jpg
+  summary: How a yield stress localizes mixing around a moving stirrer, and the three mixing regimes that follow depending on whether shed vortices escape, stay trapped, or are suppressed.
 
 - card: Mixing in heterogeneous fluids
   url: /research/heterogeneous-mixing/
+  venue: Journal of Non-Newtonian Fluid Mechanics, 2024
   thumb: /images/thumbs/heterogeneous-mixing.jpg
+  summary: What goes wrong in mixing predictions when an additive changes the density and rheology of the fluid, and why even a small amount of buoyancy matters.
 
 - card: Jet collision and emulsion quality
   url: /research/jet-emulsion/
+  venue: OMAE 2026, with SINTEF
   thumb: /images/thumbs/jet-emulsion.jpg
+  summary: Nozzle and mixing-chamber models of a dual-shear-gun system for conditioning drilling fluids, with SINTEF, and an iterative strategy that refines the emulsion over repeated passes.
 
 - card: Melting in phase-change materials
   url: /research/pcm-melting/
+  venue: In preparation
   thumb: /images/thumbs/pcm-melting.jpg
+  summary: A benchmark for melting in phase-change materials heated from above, used to compare embedded conductor layouts for thermal management.
 
 - card: Viscoelastic hollow droplets
   url: /research/hollow-droplets/
+  venue: Physics of Fluids, 2026
   thumb: /images/thumbs/hollow-droplets.jpg
+  summary: Experiments on hollow water and polymer droplets hitting a surface, from counter-jets and bubble rupture to a regime map of deposition and rebound.
 
 - card: Waxy crude oil transport
   url: /research/core-annular/
+  venue: Chemical Engineering Research and Design, 2020
   thumb: /images/thumbs/core-annular.jpg
+  summary: 3D simulations of waxy crude oil and water in core-annular and stratified regimes through inclined pipes with a gradual expansion.
 
 - card: Convection control by reinforcement learning
   url: /research/rl-convection/
+  venue: Self-directed project
   thumb: /images/thumbs/rl-convection.jpg
+  summary: A reinforcement-learning controller (PPO) that changes the bottom-wall temperature to control Rayleigh–Bénard convection, coupling OpenFOAM with Python.
 
 - card: Sparse and physics-informed flow reconstruction
   url: /research/sparse-pinns/
+  venue: Self-directed project
   thumb: /images/thumbs/sparse-pinns.jpg
+  summary: Reconstructing a cylinder wake from a few sensors in two ways, sparse snapshot regression (LASSO) and a physics-informed neural network.
 
 - card: Reduced-order models for periodic flows
   url: /research/pod-dmd/
+  venue: Self-directed project
   thumb: /images/thumbs/pod-dmd.jpg
+  summary: Predicting a periodic cylinder wake with two interpretable reduced-order models, POD with oscillator coefficients and rank-4 DMD.
