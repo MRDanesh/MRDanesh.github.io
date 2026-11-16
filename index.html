@@ -4,11 +4,13 @@ layout: default
 <section class="about">
   <h1>About</h1>
   <p>
-    I am a CFD and scientific machine learning engineer working on thermofluids and complex flows. I build and
-    validate solvers in OpenFOAM and Julia, develop data-driven surrogates and controllers, and turn simulation
-    results into design and operating recommendations for industrial partners. I am currently a Research Scientist
-    at McMaster University
-    (<a href="https://www.robinzhao.com/" target="_blank" rel="noopener noreferrer">Zhao Lab</a>).
+    I have more than six years of experience in numerical modelling, computational fluid dynamics, thermofluids,
+    machine learning, data-driven methods, and optimization. I have applied my knowledge to multiphase flows, flows in
+    porous media, data-driven control, phase-change materials, and turbulence modelling. I design model problems and
+    algorithms that go beyond default solvers and settings, such as model problems for industrial mixing systems,
+    electronic cooling devices with phase-change materials and highly conductive inserts, and aquifers with unknown,
+    heterogeneous permeability fields. I am motivated, sincere, and hardworking. I learn new methods quickly and see
+    projects through to their goals.
   </p>
 </section>
 
@@ -31,25 +33,27 @@ layout: default
   <h2>Skills</h2>
   <div class="skills">
     <div>
-      <h3>CFD and numerics</h3>
-      <p>OpenFOAM (C++ solver and model development), Julia (CUDA), PorePy, MOOSE, Basilisk, Ansys Fluent, COMSOL;
-        finite-volume methods, RANS turbulence modelling, multiphase (VOF), conjugate heat transfer, verification and
-        validation</p>
+      <h3>Software</h3>
+      <p>OpenFOAM (C++), Basilisk, Ansys Fluent and Icepak, Simcenter FloTHERM, COMSOL, MODFLOW, PorePy, MOOSE,
+        SolidWorks, ParaView, Inkscape, MATLAB</p>
     </div>
     <div>
       <h3>Scientific machine learning</h3>
-      <p>Python, PyTorch, NumPy; Fourier neural operators, physics-informed neural networks, reinforcement learning
-        (PPO), model predictive control, POD and DMD, sparse sensing, Kalman filtering, uncertainty and sensitivity
-        analysis</p>
+      <p>Fourier neural operators, physics-informed neural networks, reinforcement learning, model predictive control,
+        POD and DMD, sparse sensing, Kalman filtering, uncertainty and sensitivity analysis</p>
     </div>
     <div>
-      <h3>Thermofluids</h3>
-      <p>Convection and phase change, non-Newtonian and viscoplastic flows, turbulent and multiphase flows, mixing,
-        flow and transport in porous media</p>
+      <h3>Programming and data</h3>
+      <p>Python, MATLAB, pandas, NumPy, PyTorch, scikit-learn</p>
     </div>
     <div>
-      <h3>Experiments and tools</h3>
-      <p>Flow-cell experiments, flow visualization, PIV, rheometry; Git, Bash, parallel simulation workflows</p>
+      <h3>Version control and scripting</h3>
+      <p>Git, GitHub, Bash scripting</p>
+    </div>
+    <div>
+      <h3>Experiments and measurements</h3>
+      <p>Flow-cell experiments, flow visualization, PIV, rheometry, laser engraving, depth measurement with an Alicona
+        InfiniteFocus G6, Carbopol preparation</p>
     </div>
   </div>
 </section>
@@ -61,17 +65,69 @@ layout: default
       <p class="tl-date">Jun 2026 &ndash; present</p>
       <div>
         <h3>Research Scientist, McMaster University</h3>
-        <p>Subsurface flow and scientific ML: GPU solver in Julia, neural-operator surrogate and model predictive
-          control, bench-scale experiments. Nuclear fuel and repository modelling in PorePy and MOOSE.</p>
+        <p class="tl-project"><em>Controlling contaminant removal in porous media with an unknown permeability field.</em>
+          In a five-spot Hele-Shaw cell with an unknown permeability field, clean fluid is injected at the centre and
+          pushes the contaminant towards four corner outlets that can each be opened or closed. The permeability field is
+          inferred from sparse sensor data, while the injection rate and the open or closed state of each outlet are
+          controlled to remove the initial contamination with as little clean fluid as possible.</p>
+        <ul class="tl-bullets">
+          <li>Developed an OpenFOAM solver for multiphase Darcy flow in a medium with a heterogeneous permeability field.</li>
+          <li>Fabricated a five-spot Hele-Shaw cell with a heterogeneous permeability field by laser engraving, and ran
+            calibration tests for engraving accuracy.</li>
+          <li>Developed a numerical model problem and generated a dataset on HPC to train a Fourier neural operator as a
+            fast solver.</li>
+          <li>Developed a physics-informed geology estimator that reconstructs the unknown permeability field from sparse
+            sensor data.</li>
+        </ul>
+        <p class="tl-project"><em>Radionuclide release from TRISO nuclear fuel.</em> TRISO fuel particles are designed
+          to hold fission products inside their coating layers. This ongoing project builds an open, reduced-order model
+          of how radionuclides are released from the particles and move through the surrounding fuel matrix. The
+          particle and matrix models are coupled, so each one affects the other.</p>
+        <ul class="tl-bullets">
+          <li>Developing a Canadian coupled particle-matrix nuclear solver in PorePy that covers the Bateman and depletion equations,
+            diffusion, retention and decay through the coating layers, a pressure-driven SiC failure model, and explicit cracks and gaps in a 3D graphite and
+            ceramic matrix, and reporting progress to NSERC every month.</li>
+          <li>Qualified the fuel model over particle populations with Monte Carlo uncertainty and sensitivity
+            analysis.</li>
+          <li>Simulated a coupled thermal-hydraulic-mechanical-chemical (THMC) repository model for SMR fuels in MOOSE,
+            covering heat transport, gas migration and reactive transport, with verification and validation.</li>        </ul>
       </div>
     </div>
     <div class="tl-item">
       <p class="tl-date">Aug 2025 &ndash; Jun 2026</p>
       <div>
-        <h3>Industrial Research Engineer, Concordia University</h3>
-        <p>Industrial R&amp;D in thermal-fluids and CFD, including a Mitacs-funded project with SINTEF and Jagtech
-          (Norway). CFD models confirmed by partner experiments, a RANS model for viscoplastic flow, and a melting
-          solver for electronics thermal management.</p>
+        <h3>Industrial Research Engineer, Concordia University, SINTEF &amp; Jagtech</h3>
+        <p class="tl-project"><em>Optimizing pressure drop and mixing for conditioning oil-based drilling fluids in a
+          Dual Shear Gun system.</em> Oil-based drilling fluids are viscoplastic and must be conditioned during offshore
+          drilling so that their rheology and dispersion stay stable. The Dual Shear Gun is a proposed compact,
+          high-throughput device for fast conditioning: the fluid is sheared hard in a nozzle and then mixed by jets
+          downstream. The goal was to optimize the pressure drop along the nozzle and the placement of the mixing jets to
+          minimize energy consumption.</p>
+        <ul class="tl-bullets">
+          <li>Developed model problems for the nozzle and the mixing chamber.</li>
+          <li>Developed a RANS turbulence model for viscoplastic fluids and validated it against DNS data.</li>
+          <li>Related turbulent stresses to a local maximum stable droplet size using the Kolmogorov&ndash;Hinze
+            framework.</li>
+          <li>Proposed an iterative, flow-weighted model that tracks how the droplet-size distribution evolves over
+            successive circulations through the nozzle.</li>
+          <li>Reduced the droplet size by more than a factor of ten and made it more uniform, which makes the fluid more
+            stable.</li>
+          <li>Proposed an optimized nozzle distance that increases mixing by 50% compared with the initial design.</li>
+          <li>Experiments agreed with the numerical predictions.</li>
+        </ul>
+        <p class="tl-project"><em>Buoyancy-driven melting in phase-change materials with embedded heat spreaders.</em>
+          Phase-change materials (PCMs) are used for thermal management in photovoltaic panels and electronic cooling
+          devices, but much of their latent heat goes unused because natural convection in the melted PCM is weak. I built a
+          simplified benchmark that is heated from the top and insulated at the bottom, so heat cannot leave the system
+          and has to be redistributed inside the material. The project studied how high-conductivity inserts improve
+          heat transport.</p>
+        <ul class="tl-bullets">
+          <li>Developed an enthalpy-based conjugate heat-transfer and melting solver in OpenFOAM
+            (<a href="https://github.com/MRDanesh/conjugateMeltingFOAM" target="_blank" rel="noopener noreferrer">code on GitHub</a>).</li>
+          <li>Tested several conductor layouts and measured how they change latent heat use and the onset of
+            buoyancy-driven flow in the melted PCM.</li>
+          <li>Found conductor layouts that lower the hot-side temperature and make melting more uniform.</li>
+          <li>Increased heat transfer efficiency by 200% with the best conductor layout.</li>        </ul>
       </div>
     </div>
     <div class="tl-item">
