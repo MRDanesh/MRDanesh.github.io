@@ -22,7 +22,8 @@ layout: default
     <div class="area">
       <a class="area-title" href="{{ t.url | relative_url }}">{{ t.title }}</a>
       <a class="area-snap" href="{{ t.url | relative_url }}">
-        <img src="{{ t.snap | relative_url }}" alt="{{ t.snap_alt }}" loading="lazy">
+        {% if t.video %}<video data-src="{{ t.video | relative_url }}" poster="{{ t.poster | relative_url }}" muted loop playsinline preload="none" aria-label="{{ t.snap_alt }}"></video>
+        {% else %}<img src="{{ t.snap | relative_url }}" alt="{{ t.snap_alt }}" loading="lazy">{% endif %}
       </a>
     </div>
     {% endfor %}

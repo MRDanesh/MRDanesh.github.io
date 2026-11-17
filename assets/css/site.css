@@ -94,7 +94,7 @@ main p { margin: 0 0 16px; }
   margin-bottom: 12px;
 }
 .area-snap { display: block; }
-.area-snap img {
+.area-snap img, .area-snap video {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: contain;
@@ -102,7 +102,7 @@ main p { margin: 0 0 16px; }
   border: 1px solid var(--line);
   transition: box-shadow 0.15s ease;
 }
-.area-snap:hover img { box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12); }
+.area-snap:hover img, .area-snap:hover video { box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12); }
 
 /* ---------- Home: paper highlights and project list ---------- */
 .highlight-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
@@ -145,7 +145,7 @@ main p { margin: 0 0 16px; }
   border-top: 1px solid var(--line);
 }
 .topic-item:first-of-type { margin-top: 26px; }
-.topic-media img { width: 100%; border: 1px solid var(--line); }
+.topic-media img, .topic-media video { width: 100%; border: 1px solid var(--line); }
 .topic-item-title { font-weight: 700; font-size: 19px; color: var(--text); text-decoration: underline; }
 .venue { font-style: italic; margin: 4px 0 10px !important; }
 .more { font-size: 15px; text-decoration: none; color: var(--accent); }
@@ -260,3 +260,8 @@ main > section + section > h2:first-child { margin-top: 28px; }
 .tl-bullets li { margin-bottom: 4px; }
 .tl-bullets + .tl-project { margin-top: 16px !important; }
 .tl-project em { color: #2a2a2a; font-weight: 500; }
+
+/* Topic-page videos: keep tall clips in check; smaller clips on two topics */
+.topic-media { display: block; text-align: center; }
+.topic-media video { max-height: 360px; width: auto; max-width: 100%; margin: 0 auto; }
+.topic-heat-transfer .topic-media video, .topic-data-driven .topic-media video { max-width: 75%; max-height: 270px; }

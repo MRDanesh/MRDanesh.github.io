@@ -7,6 +7,8 @@
   page_title: Data-driven modelling and control of flows
   url: /research/data-driven/
   snap: /images/home/snap-data-driven.jpg
+  video: /images/home/area-data-driven.mp4
+  poster: /images/home/area-data-driven-poster.jpg
   snap_alt: OpenFOAM concentration field next to the Fourier neural operator prediction
   intro: >-
     Full simulations are often too slow to run inside a control loop, and in practice we only see a flow
@@ -25,7 +27,9 @@
   page_title: Mixing of complex fluids
   url: /research/mixing/
   snap: /images/home/snap-mixing.jpg
-  snap_alt: Concentration field in a jet mixing chamber
+  video: /images/home/area-mixing.mp4
+  poster: /images/home/area-mixing-poster.jpg
+  snap_alt: Dye concentration around a moving stirrer in a yield-stress fluid
   intro: >-
     Many industrial fluids, such as pastes, drilling muds, and polymer solutions, do not flow like water,
     and their properties change as they mix. I study how a yield stress, contrasts in density and
@@ -41,6 +45,8 @@
   page_title: Heat transfer and its control
   url: /research/heat-transfer/
   snap: /images/home/snap-heat-transfer.jpg
+  video: /images/home/area-heat-transfer.mp4
+  poster: /images/home/area-heat-transfer-poster.jpg
   snap_alt: Uncontrolled and reinforcement-learning-controlled Rayleigh-Benard convection
   intro: >-
     How much heat a system carries often depends on flows that are hard to control, from convection
@@ -56,6 +62,8 @@
   page_title: Flow and transport in porous media
   url: /research/porous-media/
   snap: /images/home/snap-porous-media.jpg
+  video: /images/home/area-porous-media.mp4
+  poster: /images/home/area-porous-media-poster.jpg
   snap_alt: Contaminant plume in a flow-cell experiment next to the matching OpenFOAM simulation
   intro: >-
     Flow through porous materials controls how contaminants are flushed out of the ground and how

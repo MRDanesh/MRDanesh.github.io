@@ -2,7 +2,7 @@
 layout: default
 ---
 {% assign topic = site.data.topics | where: "slug", page.topic | first %}
-<article class="topic">
+<article class="topic topic-{{ topic.slug }}">
   <h1>{{ topic.page_title }}</h1>
   <p class="dropcap">{{ topic.intro }}</p>
 
@@ -10,7 +10,8 @@ layout: default
     {% assign p = site.data.projects | where: "url", url | first %}
     <section class="topic-item">
       <a class="topic-media" href="{{ p.url | relative_url }}">
-        <img src="{{ p.thumb | relative_url }}" alt="" loading="lazy">
+        {% if p.video %}<video data-src="{{ p.video | relative_url }}" poster="{{ p.poster | relative_url }}" muted loop playsinline preload="none"></video>
+        {% else %}<img src="{{ p.thumb | relative_url }}" alt="" loading="lazy">{% endif %}
       </a>
       <div class="topic-text">
         <a class="topic-item-title" href="{{ p.url | relative_url }}">{{ p.card }}</a>
